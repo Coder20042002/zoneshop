@@ -1,0 +1,185 @@
+
+.navbar-main {
+    background-color: var(--white-color);
+}
+
+.navbar-search-list {
+    margin: 0;
+}
+
+.navbar-search-item .navbar-search-link:hover {
+    color: var(--black-color);
+}
+
+.navbar-search-item .navbar-search-link {
+    color: #9999;
+    font-weight: 500;
+   
+}
+
+.navbar-search-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 2rem;
+    border-left: 1px solid #9999;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.nav-tree {
+    width: 100%;
+}
+
+
+
+.navbar-search-item {
+
+}
+
+
+.nav-divider {
+    background-color: #fff;
+    background: url(../img/gachchan.jpg) ;
+    background-repeat: repeat-x;
+    background-size: -20px;
+    height: 2px;
+    margin: 4px 0px;
+    list-style: none;
+    width: calc(100% + 10px);
+    
+}
+
+
+.nav-tree-list {
+    
+}
+
+.nav-tree-item {
+    list-style: none;
+}
+
+.suv-tree-list {
+    padding-left: 0;
+}
+
+
+
+.suv-tree-item {
+    list-style: none;
+    cursor: pointer;
+}
+
+.suv-tree-item:hover {
+    background-color: #ccc;
+}
+
+.suv-tree-list--warp.suv-tree-list--warp {
+    padding-left: 15px;
+}
+
+
+
+.nav-tree-item__lable {
+    display: block;
+    width: 100%;
+    font-size: 2.3rem;
+    margin-top: 20px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+
+
+.suv-tree-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+
+
+
+.suv-lable {
+    border-radius: 0px;
+    color: #000;
+    padding: 4px 15px 4px 20px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+.nav-tree-item__icon {
+    font-size: 1.2rem;
+}
+
+.suv-tree-list.size-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.size {
+    display: inline-flex;
+    text-align: center;
+    padding: 18px 0px 0px 0px;
+    width: 68px;
+    height: 68px;
+    border: #cecece 1px solid;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    
+
+}
+
+
+
+.glyphicon {}
+
+.left-divider {
+    height: 2px;
+    border-top: #303030 2px solid;
+    padding-right: 15px;
+    display: block;
+
+}
+
+.col-12.search-left-divider.left-divider {
+    margin-bottom: 4rem;
+}
+
+
+.count-product {
+    text-align: center;
+}
+
+.count-product__content {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+.count-product__keyword  {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.card-warp {
+    margin-top: 5%;
+}
+
+.card-limit {
+    display: none;
+}
+
+.limit-option:active .card-warp{
+    display: none;
+}
