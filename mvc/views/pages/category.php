@@ -113,9 +113,9 @@
                                     echo "
                                     
                                 <li class='suv-tree-item'>
-                                <a href='?danhmuc =".$rows->id_dm."'>
+                                <a href='?dm =".$rows->id_dm."'>
                                     <label class='suv-lable'>
-                                        <input name='list-option' class='option' type='checkbox' value='' hidden=''>
+             
                                         $rows->ten
                                         <span class='glyphicon'></span>
                                     </label>
@@ -260,7 +260,7 @@
 
 
 
-                        while ($rows = mysqli_fetch_object($data["list_SP"])) {
+                        while ($rows = mysqli_fetch_object($data["Danhmuc"])) {
                             echo
                             "<div class='col-12 col-md-6 col-xl-4'>
                         <div class='card-list'>
@@ -291,44 +291,8 @@
 
                 <?php 
                  ?>
-                <!--limit-->
-                <div class="card-warp ">
-                    <div class="row ">
-
-                        <!--Begin card-l-->
-                        <?php
-
-                       $result2 = executeQuery("select * from tb_product where id_category=" . $rows['id']);
-
-                        while ($rows = mysqli_fetch_object($data["list_ID_DM"])) {
-                            echo
-                            "<div class='col-12 col-md-6 col-xl-4'>
-                        <div class='card-list'>
-                            <div class='card'>
-                                <img src='$rows->hinhanh' class='card-img-top' alt='...'>
-                                <div class='card-body'>
-                                    <h5 class='card-title'>$rows->ten</h5>
-                                    <p>
-                                        <span class='card-price-text'>Giá bán :</span>
-                                        <span class='card-price'>$rows->gia </span>
-                                    </p>
-                                    <a href='#' class='btn btn-primary'>Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>";
-                        }
-
-                        $data["gp_limit"];
-
-
-                        ?>
-
-                    </div>
-
-                </div>
-
+                
+                
 
 
 

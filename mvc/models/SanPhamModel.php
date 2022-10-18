@@ -24,12 +24,22 @@ class SanPhamModel extends DB{
        return $this->chayTruyVanTraVeDL($this->truyvan1);
    }
 
+  
+
+    
+    function list_DM($key){
+       $truyvan_dm = "SELECT * FROM tbl_sanpham where id_dm='$key' ";
+       return $this->chayTruyVanTraVeDL($this->truyvan_dm);
+   }
+
     
 
     function gp_SP(){
        return $this->giaiPhongBoNho($this->truyvan1);
    }
     
+
+   
    //danh sach count san pham tim kiem
  
 

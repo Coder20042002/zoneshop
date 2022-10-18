@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-
+    <!-- <base href="http://localhost/zoneshop/"> -->
+    
     <link rel="stylesheet" href="public/css/style/container.css">
     <link rel="stylesheet" href="public/css/style/base.css">
     <link rel="stylesheet" href="public/css/style/header.css">
