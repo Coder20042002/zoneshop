@@ -71,6 +71,10 @@
     .part.part-warp {
         padding-top: 70px;
     }
+
+    .login-main {
+        width: 80% !important;
+    }
 }
 
 /* MOBILE */
@@ -94,5 +98,11 @@
     .part.part-warp {
         padding-top: 70px;
     }
+
+    .login-main {
+        width: 80% !important;
+    }
+
+    
     
 }

@@ -75,7 +75,7 @@
 
                     <div class="col-1 header_navbar-icon">
                         <div class="header_navbar-icon--gr">
-                            <a href="#" class="header_navbar-icon-link">
+                            <a href="./login" class="header_navbar-icon-link">
                                 <i class="fa-regular fa-user header_navbar-icon--active"></i>
                             </a>
                         </div>

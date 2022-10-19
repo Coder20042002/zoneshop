@@ -82,7 +82,7 @@
                             <ul class="suv-tree-list">
                                 
                                 <li class="suv-tree-item">
-                                    <a href="?limit=" class="limit-option">
+                                    
                                     <label class="suv-lable">
                                         <!-- <input name="list-option" class="option" type="checkbox" value="" hidden=""> -->
                                         Limited Edition

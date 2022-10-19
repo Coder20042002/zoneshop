@@ -1,0 +1,176 @@
+.login {
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+  }
+  
+  
+  .login-main {
+      width: 40%;
+      color: var(--black-color);
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  }
+  
+
+  .login-user {
+    padding: 0 30px;
+}
+  .heading-login {
+      font-size: 4rem;
+      color: var(--black-color);
+      text-align: center;
+      padding-bottom: 0.8em;
+  }
+  
+  .login-input {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    width: 100%;
+  }
+  
+  .input-warp {
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--black-color);
+    padding: 0 12px 2px;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    margin: 0 0 20px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .input-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .icon-user {
+    font-size: 1.8rem;
+    padding-bottom: 18px;
+    color: #19B0E7;
+    
+  }
+
+  .remember {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    margin: 20px 0; 
+}
+
+.checkbox1 {
+    display: flex;
+    justify-content: space-around;
+    width:30%;
+}
+
+.forgot {
+    
+}
+
+.forgot h6 a {
+    font-size: 1.5rem;
+    color: #e4dede;
+    text-decoration: none;
+}
+
+.forgot h6 a:hover {
+    color: #c3c3c3;
+}
+
+.login-sub {
+    background: #ff3366;
+    color: #FFF;
+    font-size: 26px;
+    padding: 0.3em 1.2em;
+    width: 100%;
+    font-weight: 500;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.login-sub,.sign-up h2:hover{
+    background-color:rgba(255, 51, 102,0.95);
+}
+
+.login-or    {
+    margin: 2rem 0;
+}
+
+.sign-up h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    background: #ff3366;
+    width: 40px;
+    height: 40px;
+    line-height: 1.7rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    line-height: 4rem;
+}
+
+.login-social {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.login-social .login-link {
+    display: flex;  
+    align-items: center;
+    text-decoration: none;
+    background-color: #19B0E7;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 30%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 5px 5px;
+    
+}
+
+.login-social .login-link:hover {
+    background-color: rgba(27, 181, 236,0.95);
+}
+
+.login-social a h5 {
+    border-left: 1px dotted #c3c3c3;
+    display: flex;  
+    align-items: center;
+    margin-bottom: 0;
+    width: 100%;
+    padding-left: 8px;
+}
+
+.icon-login {
+    padding-right: 5px;
+}

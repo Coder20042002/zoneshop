@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="public/css/style/footer.css">
     <link rel="stylesheet" href="public/css/style/reponsive.css">
     <link rel="stylesheet" href="public/css/style/search.css">
+    <link rel="stylesheet" href="public/css/style/login.css">
     <link rel="stylesheet" href="themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/srcipt.js">
 
