@@ -113,7 +113,7 @@
                                     echo "
                                     
                                 <li class='suv-tree-item'>
-                                <a href='?dm=".$rows->id_dm."'>
+                                <a href='category/?dm=".$rows->id_dm."'>
                                     <label class='suv-lable'>
              
                                         $rows->ten
@@ -257,7 +257,9 @@
 
                         <!--Begin card-l-->
                         <?php
-
+// echo'<pre>';
+// print_r($_GET);
+// echo'</pre>';
 
 
                         while ($rows = mysqli_fetch_object($data["Danhmuc"])) {

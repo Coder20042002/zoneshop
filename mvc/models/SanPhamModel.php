@@ -29,7 +29,7 @@ class SanPhamModel extends DB{
     
     function list_DM($key){
        $truyvan_dm = "SELECT * FROM tbl_sanpham where id_dm='$key' ";
-       return $this->chayTruyVanTraVeDL($this->truyvan_dm);
+       return mysqli_query($this->con,$truyvan_dm);
    }
 
     

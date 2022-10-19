@@ -22,8 +22,9 @@ class App{
         if(isset($arr[1])){
             if( method_exists( $this->controller , $arr[1]) ){
                 $this->action = $arr[1];
+                unset($arr[1]);
             }
-            unset($arr[1]);
+            
         }
 
         
@@ -31,7 +32,9 @@ class App{
          // Params
          $this->params = $arr?array_values($arr):[];
 
-
+         
+       
+         
 
          //ham goi mang hinh
          call_user_func_array ([new $this->controller, $this->action], $this->params);
@@ -39,7 +42,7 @@ class App{
     
     function UrlProcess(){
         if(isset($_GET["url"])) {
-            return explode("/",filter_var(trim($_GET["url"],"/")));
+            return $url= explode("/",filter_var(rtrim($_GET["url"],"/")));
         }
         
     }
