@@ -1,40 +1,54 @@
-<h1>Trang đăng ký thành viên</h1>
-        <form action="xuly.php" method="POST">
-            <table cellpadding="0" cellspacing="0" border="1">
-                <tr>
-                    <td>
-                        Tên đăng nhập : 
-                    </td>
-                    <td>
-                        <input type="text" name="txtUsername" size="50" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Mật khẩu :
-                    </td>
-                    <td>
-                        <input type="password" name="txtPassword" size="50" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Email :
-                    </td>
-                    <td>
-                        <input type="text" name="txtEmail" size="50" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Họ và tên :
-                    </td>
-                    <td>
-                        <input type="text" name="txtFullname" size="50" />
-                    </td>
-                </tr>
-
-            </table>
-            <input type="submit" value="Đăng ký" />
-            <input type="reset" value="Nhập lại" />
-        </form>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="login">
+                <div class="login-main">
+                    <form action="xulydangki.php" method="POST">
+                        <h1 class="heading-login">Đăng Kí</h1>
+                        <div class="input-item input-reg ">
+                            <div class="cls_caption">Tên tài khoản:</div>
+                            <div class="cls_input">
+                                <input class="input-warp " type="text" name="username" value="<?php echo isset($_GET['username']) ? $_GET['username'] : ''; ?>" />
+                            </div>
+                        </div><br style="clear:both;" />
+                        <div class="input-item input-reg">
+                            <div class="cls_caption">Mật khẩu: </div>
+                            <div class="cls_input">
+                                <input class="input-warp " type="password" name="password" />
+                            </div>
+                        </div><br style=" clear:both;" />
+                        <div class="input-item input-reg">
+                            <div class="cls_caption">Nhập lại mật khẩu:</div>
+                            <div class="cls_input">
+                                <input class="input-warp " type="password" name="password2" />
+                            </div>
+                        </div><br style="clear:both;" />
+                        <div class="input-item input-reg">
+                            <div class="cls_caption">Họ và tên:</div>
+                            <div class="cls_input">
+                                <input class="input-warp " type="text" name="fullname" value="<?php echo isset($_GET['fullname']) ? $_GET['fullname'] : ''; ?>" />
+                            </div>
+                        </div><br style="clear:both;" />
+                        <div class="input-item input-reg">
+                            <div class="cls_caption">Email:</div>
+                            <div class="cls_input">
+                                <input class="input-warp " type="email" name="email" value="<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>" />
+                            </div>
+                        </div><br style="clear:both;" />
+                        <div class="img_row input-item input-reg">
+                            <img src="captcha.php" /><br style="clear:both;" />
+                            <div class="cls_caption">Nhập Captcha:</div>
+                            <div class="cls_input">
+                                <input class="input-warp " type="text" name="captcha" />
+                            </div>
+                        </div><br style="clear:both;" />
+                        <div class=" “img_row">
+                            <input class="btn-log_reg" type="submit" value="Đăng Ký"  />
+                            <input class="btn-log_reg" type="reset" value="Xoá Form" />
+                        </div><br style="clear:both;" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

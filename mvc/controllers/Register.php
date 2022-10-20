@@ -1,9 +1,9 @@
 <?php
-class Login extends Controller {
+class Register extends Controller {
     function SayHi(){
         
         $this->view("master",[
-            "Page"=>"login"
+            "Page"=>"register",
                
         ]);
        

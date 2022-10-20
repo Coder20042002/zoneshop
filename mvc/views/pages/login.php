@@ -6,11 +6,11 @@
    					<h1 class="heading-login"> Login Form</h1>
 
    					<div class="login-user">
-   						<form action="#" method="post">
+   						<form action="login/Xuli" method="post">
    							<div class="login-input">
    								<div class="input-item">
    									<i class="icon-user ti-user"></i>
-   									<input type="text" placeholder="User name" name="name" class="input-warp " />
+   									<input type="text" placeholder="User name" name="username" class="input-warp " />
    								</div>
    								<div class="input-item">
    									<i class="icon-user ti-lock"></i>
@@ -29,8 +29,11 @@
 
    							</div>
 
-   							<input type="submit" value="Login" class="login-sub">
+   							<input type="submit" value="Login" class="btn-log_reg">
    						</form>
+
+						<?php require_once "msg.php"; ?>
+
    						<div class="login-or">
    							<div class="sign-up">
    								<h2>or</h2>
