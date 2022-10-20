@@ -1,4 +1,5 @@
 <?php
+session_start();
 class Login extends Controller {
     function SayHi(){
         
@@ -10,16 +11,22 @@ class Login extends Controller {
     }
 
     public function Xuli() {
+        
         $list=$this -> model("UserModel");
-        if (isset($_POST["username"]) && isset($_POST["password"])) {
-            if ($list->login($_POST["username"], $_POST["password"])) {
-                header("Location: admin.php");
+        if (isset($_POST['username']) && isset($_POST['password'])) {
+            if ($list->dangnhap($_POST["username"], $_POST["password"])) {
+                $this->view("master",[
+                    "Page"=>"admin"
+                       
+                ]);
             } else {
-                header("Location: login.php?msg=login-fail");
+                header("Location: ./?msg=login-fail");
             }
         } else {
-            header("Location: login=");
+            header("Location: dangnhap.php");
         }
+
+
         
     }
     

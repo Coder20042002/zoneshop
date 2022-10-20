@@ -177,6 +177,51 @@
 
 }
 
+
+
+
+
+
+.login-main.reg-main {
+    width: 50%;
+
+}
+
+.form-reg {
+    padding: 0 80px;
+}
+
+.cls_input {
+    width: 60%;
+}   
+
+.cls_caption {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
 .input-reg  {
     justify-content: space-between;
 }  
+
+.img_row {
+    display: flex;
+
+}
+
+.btn-reg {
+    font-size: 1.8rem ;
+}
+
+.img_row {
+    display: flex;
+    flex-direction: column;
+}
+
+input.btn-reg.btn-log_reg {
+    margin-bottom: 8px;
+}   
+
+input.btn {
+    background-color: #fcd9e2!important;
+}

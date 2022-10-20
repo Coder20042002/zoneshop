@@ -35,6 +35,38 @@ class DB{
 		}
 	}
 
+	
+	function dispose($link)
+	{
+		try {
+			mysqli_close($link);
+		} catch (TypeError $e) {
+		}
+	}
+
+function executeNonQuery($q)
+{
+	
+	$result = mysqli_query($this->con,$q);
+	giaiPhongBoNho($this->con,$q);
+	return $result;
+}
+
+function executeQuery($q)
+{
+	$result = mysqli_query($this->con,$q);
+	giaiPhongBoNho($this->con,$q);
+	return $result;
+}
+	
+function stringSQL($string)
+{
+	mysqli_real_escape_string($this->con, $string);
+	giaiPhongBoNho($this->con,$string);
+	return $string;
+}
+
+	
 }
 
 ?>

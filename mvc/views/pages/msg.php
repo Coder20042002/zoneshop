@@ -13,9 +13,13 @@ if (isset($_GET['msg'])) {
         Tài khoản bạn đăng ký đã tồn tại, vui lòng chọn tên đăng nhập khác
         </div>";
     } else if ($_GET['msg'] == "login-fail") {
-        echo " <div class='msg' style='background-color:red; color:white; '>
-        Username hoặc Password không đúng. Vui lòng kiểm tra lại !
+        echo "
+         <div class='msg' style='background-color:red; color:white; '>
+         <script>
+         alert(' Username hoặc Password không đúng. Vui lòng kiểm tra lại !')
+        </script>
         </div>";
+        
     }
 }
 ?>

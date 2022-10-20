@@ -1,11 +1,27 @@
 <?php
-class UserModel extends DB{
-   function login($username,$password) {
-    $query = "SELECT count(*) FROM tb_user WHERE username='".mysqli_real_escape_string($this->con,$username)."'
-    and password='".md5($password)."'";
-    return mysqli_query($this->con,$query);
-   }
-    
+class UserModel extends DB{ 
+   function dangnhap($username, $password)
+{
+    $account = "";
+    $result = mysqli_query($this->con,
+        "SELECT * FROM tb_user WHERE username='" . mysqli_real_escape_string($this->con,$username) . "'
+        and password='" . md5($password) . "'"
+    );
+    $row = mysqli_fetch_row($result);
+    mysqli_free_result($result);
+
+    if ($row != NULL) {
+        $account = array(
+            "id" => $row[0],
+            "username" => $row[1],
+            "fullname" => $row[3],
+            "email" => $row[4]
+        );
+        $_SESSION['account'] = $account;
+        return true;
+    } else
+        return false;
+}
 
    function register($username,$password,$email,$fullname) {
     $truyvan="INSERT INTO tb_user values(null,'".mysqli_real_escape_string($this->con,$username)."',
@@ -21,6 +37,15 @@ class UserModel extends DB{
         return false;
     }
    }
+
+   function dangxuat()
+{
+    if (isset($_SESSION['account'])) {
+        unset($_SESSION['account']);
+        return true;
+    } else
+        return false;
+}
 
    
 }

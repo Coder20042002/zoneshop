@@ -4,7 +4,7 @@
 
                     <div class=" col-2 col-md-2 ">
                         <div class="header-navbar-logo">
-                            <a href="index.php" class="header-navbar-log__link">
+                            <a href="./home" class="header-navbar-log__link">
                                 ZoneShop
                             </a>
                         </div>

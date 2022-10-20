@@ -10,11 +10,11 @@
    							<div class="login-input">
    								<div class="input-item">
    									<i class="icon-user ti-user"></i>
-   									<input type="text" placeholder="User name" name="username" class="input-warp " />
+   									<input required type="text" placeholder="User name" name="username" class="input-warp " />
    								</div>
    								<div class="input-item">
    									<i class="icon-user ti-lock"></i>
-   									<input type="password" placeholder="Password" name="password" class="input-warp" />
+   									<input required type="password" placeholder="Password" name="password" class="input-warp" />
    								</div>
    							</div>
 
@@ -29,7 +29,7 @@
 
    							</div>
 
-   							<input type="submit" value="Login" class="btn-log_reg">
+   							<input type="submit" value="Login" class=" btn-log_reg">
    						</form>
 
 						<?php require_once "msg.php"; ?>
