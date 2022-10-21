@@ -1,24 +1,32 @@
 <?php
 if (isset($_GET['msg'])) {
     if ($_GET['msg'] == "done") {
-        echo " <div class='msg' style='background-color:green; color:white;'>
-        Đăng kí thành công!
-        </div>";
+        echo " 
+        <script>
+         alert(' Đăng kí thành công!')
+        </script>
+        
+        ";
     } elseif ($_GET['msg'] == "unvalid-data") {
-        echo " <div class='msg' style='background-color:red; color:white;'>
-        Vui lòng kiểm tra lại thông tin!
-        </div>";
+        echo " 
+        <script>
+         alert('Vui lòng kiểm tra lại thông tin!')
+        </script>
+        
+       ";
     } else if ($_GET['msg'] == "duplicate") {
-        echo " <div class='msg' style='background-color:orange; color:white;'>
-        Tài khoản bạn đăng ký đã tồn tại, vui lòng chọn tên đăng nhập khác
+        echo " 
+        <script>
+         alert('Tài khoản bạn đăng ký đã tồn tại, vui lòng chọn tên đăng nhập khác')
+        </script>
+        
         </div>";
     } else if ($_GET['msg'] == "login-fail") {
         echo "
-         <div class='msg' style='background-color:red; color:white; '>
          <script>
          alert(' Username hoặc Password không đúng. Vui lòng kiểm tra lại !')
         </script>
-        </div>";
+        ";
         
     }
 }
