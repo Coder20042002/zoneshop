@@ -1,4 +1,14 @@
 
+.card-list .cart-link {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.card-list .cart-link:hover {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
 .navbar-main {
     background-color: var(--white-color);
 }

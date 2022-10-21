@@ -2,28 +2,48 @@
 
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img--fluid w-100" src="./img product/product/aothuncotron/picture1.jpg" id="MainImg" alt="">
+                <?php 
+                while($rows=mysqli_fetch_object($data["Image"])) {
+                    echo "
+                    <img class='img--fluid w-100' src='$rows->hinh1' id='MainImg' alt=''>
 
-                <div class="small-img-group">
-                    <div class="small-img-col">
-                        <img src="./img product/product/aothuncotron/picture1.jpg" width="100%" alt="" class="small-img">
+                    <div class='small-img-group'>
+                        <div class='small-img-col'>
+                            <img src='$rows->hinh1' width='100%' alt='' class='small-img'>
+                        </div>
+                        <div class='small-img-col'>
+                            <img src='$rows->hinh2' width='100%' alt='' class='small-img'>
+                        </div>
+                        <div class='small-img-col'>
+                            <img src='$rows->hinh3' width='100%' alt='' class='small-img'>
+                        </div>
+                        <div class='small-img-col'>
+                            <img src='$rows->hinh4' width='100%' alt='' class='small-img'>
+                        </div>
+                    
                     </div>
-                    <div class="small-img-col">
-                        <img src="./img product/product/aothuncotron/picture2.jpg" width="100%" alt="" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="./img product/product/aothuncotron/picture3.jpg" width="100%" alt="" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="./img product/product/aothuncotron/picture4.jpg" width="100%" alt="" class="small-img">
-                    </div>
-                </div>
+                    ";
+                }
+                
+                ?>
+                
             </div>
 
             <div class="col-lg-5 col-md-12 col-12">
+                
                 <h6 class="heading-product">Home / T-Shirt</h6>
-                <h3 class="name-product py-4">Áo thun Zara</h3>
-                <h2 class="product-price">$129.000</h2>
+                <?php
+                while($rows=mysqli_fetch_object($data["Product"])) {
+                    echo "
+                    <h3 class='name-product py-4'>$rows->ten</h3>
+                    <h2 class='product-price'>$rows->gia đ</h2>
+                    ";
+                    
+                   
+                }
+                
+                
+                 ?>
                 <select class='option-size my-3'>
                     <option value=''>Select Size</option>
                 <?php 
@@ -39,17 +59,21 @@
                <img src="public/css/img/bangsize.jpg" alt="" class="table-size">
             </div>
             <div class="col-lg-2 col-md-12 col-12"> 
-            <h4 class="detal-product mt-5 mb-5">
-                    <span class="detail-content">
-                        Chất liệu: Kate<br>
-                        Thành phần: 12% modal và 88% superfine<br>
-                        - Ít nhăn và dễ ủi<br>
-                        - Nhanh khô và thoáng mát<br>
-                        HDSD:<br>
-                        - Áo sơ mi màu phơi trong bóng râm để tránh bạc màu phần vai áo<br>
-                        - Áo sơ mi trắng có thể phơi ngoài nắng để áo trắng sáng hơn ( không phơi quá lâu )
-                    </span>
-                </h4>
+                
+                    <?php
+                    
+                    while($rows=mysqli_fetch_object($data["gp"])) {
+                        echo "
+                        <h4 class='detal-product mt-5 mb-5'>
+                        <span class='detail-content'>
+                        $rows->mota
+                        </span>
+                    </h4>
+                        ";
+                        
+                    }
+                        ?>
+           
             </div>
         </div>
 

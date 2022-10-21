@@ -32,7 +32,20 @@ class SanPhamModel extends DB{
        return mysqli_query($this->con,$truyvan_dm);
    }
 
+   function list_id_HinhAnh($key){
+    $truyvan_dm = "SELECT * FROM tbl_sanpham where id_hinhanh='$key' ";
+    return mysqli_query($this->con,$truyvan_dm);
+        
     
+    
+}
+
+  
+function gp_HinhAnh(){
+    $truyvan_dm = "SELECT * FROM tbl_sanpham ";
+    return $this->giaiPhongBoNho($this->truyvan);
+}
+
 
     function gp_SP(){
        return $this->giaiPhongBoNho($this->truyvan1);
