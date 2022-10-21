@@ -26,12 +26,20 @@ class SanPhamModel extends DB{
 
   
 
-    
+     //danh sach danh mục san pham
     function list_DM($key){
        $truyvan_dm = "SELECT * FROM tbl_sanpham where id_dm='$key' ";
        return mysqli_query($this->con,$truyvan_dm);
    }
 
+   //danh sach danh mục all san pham khác id
+   function list_ID_DM($id,$id_dm){
+    $truyvan_dm = "SELECT * FROM tbl_sanpham WHERE id != '$id' and id_dm ='$id_dm'";
+    return mysqli_query($this->con,$truyvan_dm);
+}
+
+
+     //danh sach hinh anh san pham
    function list_id_HinhAnh($key){
     $truyvan_dm = "SELECT * FROM tbl_sanpham where id_hinhanh='$key' ";
     return mysqli_query($this->con,$truyvan_dm);
@@ -40,11 +48,11 @@ class SanPhamModel extends DB{
     
 }
 
-  
-function gp_HinhAnh(){
+ 
+   function gp_HinhAnh(){
     $truyvan_dm = "SELECT * FROM tbl_sanpham ";
     return $this->giaiPhongBoNho($this->truyvan);
-}
+  }
 
 
     function gp_SP(){
@@ -85,7 +93,7 @@ function gp_HinhAnh(){
        return $this->giaiPhongBoNho($this->truyvan_Search);
    }
 
-   //danh sach san pham bestseller
+   //danh sach san pham giới hạn
    public $truyvan2 = "SELECT * FROM tbl_sanpham where id_limit='1'";
 
     

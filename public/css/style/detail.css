@@ -68,3 +68,15 @@ h6.heading-product {
     margin-top: 40px;
     max-width: 380px;
 }   
+
+.relate-product {
+    margin-top: 60px;
+}
+
+.relate-warp {
+    width: 30px;
+    height: 4px;
+    background-color: #ee4266;
+    margin-left: 50%;
+    margin-bottom: 60px;
+}

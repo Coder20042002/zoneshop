@@ -15,12 +15,22 @@ class Detail extends Controller {
             $k =$list->list_id_HinhAnh($key);
             
         }
+
+        if (isset($_GET["dm"]) && isset($_GET["id_sp"])) {
+            
+            $id= $_GET["id_sp"];
+            $id_dm= $_GET["dm"];
+            $dm =$list->list_ID_DM($id,$id_dm);
+            
+        }
+
         $this->view("master",[
             "Page"=>"detail",
             "Size"=>$list_size->list_size(),
             "Image"=>$result,
             "Product"=>$sp,
-            "gp"=>$k
+            "gp"=>$k,
+            "DM"=>$dm
         ]);
        
     }
