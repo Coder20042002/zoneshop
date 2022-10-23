@@ -3,9 +3,19 @@ img.small-img {
     object-fit: cover;
 }
 
+img#MainImg {
+    max-height: 650px;
+    object-fit: cover;
+}
+
 .small-img-group {
     display: flex;
     justify-content: space-between;
+}
+
+span.in4-product {
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 h6.heading-product {
@@ -15,7 +25,7 @@ h6.heading-product {
 }
 h6.detail {
     margin-bottom: 36px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .pull-left {
@@ -29,7 +39,7 @@ h6.detail {
 
 
 .name-product {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 600;
     line-height: 1.2;
 
@@ -37,8 +47,9 @@ h6.detail {
 
 .product-price {
     color: #ee4266;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
 
 }
 
@@ -55,6 +66,7 @@ h6.detail {
     z-index: 999;
     display: block;
     border: #e1e1e1 1px solid;
+    margin-bottom: 14px;
 }
 
 .color {
@@ -114,7 +126,7 @@ h6.detail {
 
 .detail-content {
     font-size: 1.4rem;
-    font-weight: 200;
+    font-weight: 450;
     
 }
 .table-size {
@@ -194,16 +206,18 @@ grp-btn1 {
 }
 
 .option-main h5 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     padding: 8px 0;
 }
 
 .info-product-size #text-size-in4{
     margin:0 auto;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    margin: 20px 0;
-    text-align: center;
+    /* margin: 40px 0; */
+    /* text-align: center; */
+    margin-top: 90px;
+    margin-bottom: 15px;
 
 }
 

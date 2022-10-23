@@ -41,13 +41,14 @@
                         <span class='pull-left'>Mã sản phẩm: <strong>A00$rows->id</strong></span>
                         <span class='pull-right'>Tình trạng: <strong>Còn hàng</strong></span>
                     </h6>
-                    <h2 class='product-price'>$rows->gia đ</h2>
+                    <h2 class='product-price'>$rows->gia VNĐ</h2>
                     ";
             }
 
 
             ?>
             <div class=" left-divider divider-blur"></div>
+            <span class="in4-product">Thông tin sản phẩm</span>
 
 
             <?php
