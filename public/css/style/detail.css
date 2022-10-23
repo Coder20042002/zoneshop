@@ -1,6 +1,6 @@
 img.small-img {
-    /* margin: 0 auto; */
-    max-height: 208px;
+    max-height: 160px;
+    object-fit: cover;
 }
 
 .small-img-group {
