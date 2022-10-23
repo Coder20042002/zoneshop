@@ -136,7 +136,7 @@
                                 <span class="nav-tree-item__icon ti-angle-down"></span>
                             </lable>
                             <ul class="suv-tree-list">
-                            <?php
+                            <!-- <?php
                                 while($rows = mysqli_fetch_object($data["Attribute"])){
                                     echo "
                                     
@@ -151,7 +151,7 @@
                                 </li>
                                 
                                     ";}
-                                 ?>
+                                 ?> -->
                                  
 
                                 <li class="suv-tree-item">
@@ -253,7 +253,7 @@
                                        <h5 class='card-title'>$rows->ten</h5>
                                        <p>
                                            <span class='card-price-text'>Giá bán : </span>
-                                           <span class='card-price'>$rows->gia đ</span>
+                                           <span class='card-price'>$rows->gia VNĐ</span>
                                        </p>
                                        <a href='#' class='btn btn-primary'>Mua ngay</a>
                                    </div>
