@@ -23,7 +23,7 @@ class Login extends Controller {
                 header("Location: ./?msg=login-fail");
             }
         } else {
-            header("Location: dangnhap.php");
+            header("Location: dangnhap");
         }
 
 

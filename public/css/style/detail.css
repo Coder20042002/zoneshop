@@ -6,7 +6,9 @@ img.small-img {
 img#MainImg {
     max-height: 650px;
     object-fit: cover;
+    margin-bottom: 5px;
 }
+
 
 .small-img-group {
     display: flex;

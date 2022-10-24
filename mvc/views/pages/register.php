@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="login">
                 <div class="login-main reg-main">
-                    <form action="xulydangki.php" method="POST" class="form-reg">
+                    <form action="register/Xuli" method="POST" class="form-reg">
                         <h1 class="heading-login">Đăng Kí</h1>
                         <div class="input-item input-reg ">
                             <div class="cls_caption">Tên tài khoản:</div>
@@ -35,12 +35,7 @@
                                 <input required class="input-warp " type="email" name="email" value="<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>" />
                             </div>
                         </div><br style="clear:both;" />
-                        <div class=" input-item input-reg">
-                            <img src="captcha.php" /><br style="clear:both;" />
-                            <div class="cls_input">
-                                <input required class="input-warp " type="text" name="captcha" />
-                            </div>
-                        </div><br style="clear:both;" />
+                       
                         <div class="img_row ">
                             <input class="btn-reg btn-log_reg" type="submit" value="Đăng Ký"  />
                             <input class="btn" type="reset" value="Xoá Form" />

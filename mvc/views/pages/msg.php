@@ -1,13 +1,12 @@
 <?php
 if (isset($_GET['msg'])) {
     if ($_GET['msg'] == "done") {
-        echo " 
-        <script>
-         alert(' Đăng kí thành công!')
+        echo "
+         <script>
+         alert(' Đăng ký thành công !')
         </script>
-        
         ";
-    } elseif ($_GET['msg'] == "unvalid-data") {
+    } else if ($_GET['msg'] == "unvalid-data") {
         echo " 
         <script>
          alert('Vui lòng kiểm tra lại thông tin!')

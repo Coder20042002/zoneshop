@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/srcipt.js">
 
+    <scriptsrc=’https://www.google.com/recaptcha/api.js?hl=vi’></script>
+
     <!--subnav-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">

@@ -5,7 +5,7 @@
             <div class="col-sm-12 ">
                 <div class="text-center">
                     <p class="mb-1">Sản Phẩm Mới</p>
-                    <p class="mb-2">Đừng bỏ lỡ các chương trình khuyến mãi Hot tại Yame.vn</p>
+                    <p class="mb-2">Đừng bỏ lỡ các chương trình khuyến mãi Hot tại ZoneShop.vn</p>
                 </div>
 
 
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 <p class="mb-1">Các chương trình Khuyến mãi</p>
-                <p class="mb-2">Đừng bỏ lỡ các chương trình khuyến mãi Hot tại Yame.vn</p>
+                <p class="mb-2">Đừng bỏ lỡ các chương trình khuyến mãi Hot tại ZoneShop.vn</p>
 
             </div>
         </div>
@@ -37,10 +37,10 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 px-1">
-                <h4 class="fw-normal"><a href="#">YaMe.vn - GIỚI THIỆU</a></h4>
+                <h4 class="fw-normal"><a href="#">ZoneShop.vn - GIỚI THIỆU</a></h4>
                 <div class="banner-home3-colection-top" style="margin-bottom:10px;">
                     <a href="#">
-                        <img class="img-fluid" src="public/css/img/Thumb_NCG.jpg" alt="YaMe.vn - GIỚI THIỆU">
+                        <img class="img-fluid" src="public/css/img/Thumb_NCG.jpg" alt="ZoneShop.vn - GIỚI THIỆU">
                     </a>
                 </div>
                 <div class="row">
@@ -108,7 +108,7 @@
 
             while ($rows = mysqli_fetch_object($data["list_BestSeller"])) {
                 echo
-                "<div class='col-12 col-md-6 col-xl-4'>
+                "<div class='col-12 col-md-6 col-xl-3'>
                
                 <div class='card-list'>
                  <a href='detail/?id=".$rows->id_hinhanh."&&dm=".$rows->id_dm."&&id_sp=".$rows->id."' class='cart-link' >

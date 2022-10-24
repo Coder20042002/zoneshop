@@ -65,7 +65,7 @@
                     <p>Giấy CNĐKDN: 0310874914 – Ngày cấp: 25/11/2011 - Cơ quan cấp: Phòng Đăng Ký Kinh Doanh – Sở Kế
                         Hoạch và Đầu Tư TP.HCM</p>
                     <p>Địa chỉ đăng ký kinh doanh: 766/3B-3C Sư Vạn Hạnh (Nối dài), Phường 12, Quận 10, TP.HCM - Điện
-                        thoại: (028) 3868 4857 - Mua hàng: (028) 7307 1441 - Email: cskh@yame.vn</p>
+                        thoại: (028) 3868 4857 - Mua hàng: (028) 7307 1441 - Email: zoneshop@gmail.com.vn</p>
                 </div>
 
             </div>
