@@ -29,19 +29,27 @@
                     
                         <div class='col-12 col-md-6 col-xl-4'>
                         <div class='card-list'>
-                        <a href='detail/?id=".$rows->id_hinhanh."&&dm=".$rows->id_dm."&&id_sp=".$rows->id."' class='cart-link' >
-                           <div class='card'>
-                               <img src='$rows->hinhanh' class='card-img-top' alt='...'>
-                               <div class='card-body'>
-                                   <h5 class='card-title'>$rows->ten</h5>
-                                   <p>
-                                       <span class='card-price-text'>Giá bán : </span>
-                                       <span class='card-price'>$rows->gia đ</span>
-                                   </p>
-                                   <a href='#' class='btn btn-primary'>Mua ngay</a>
-                               </div>
-                           </div>
-                           </a> 
+                        <a href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
+                        <div class='card'>
+                            
+    
+                           <img class='card-img-top' onmouseover='this.src=\"$rows->hinh1\"' '.
+                            '    onmouseout='this.src=\"$rows->hinhanh\"' '.
+                            '    src='$rows->hinhanh' />
+                            
+                            
+                            
+                            
+                            <div class='card-body'>
+                                <h5 class='card-title'>$rows->ten</h5>
+                                <p>
+                                    <span class='card-price-text'>Giá bán : </span>
+                                    <span class='card-price'>$rows->gia đ</span>
+                                </p>
+                                <button class='btn btn-primary'>Mua ngay</button>
+                            </div>
+                        </div>
+                     </a> 
                        </div> 
 
                             </div>

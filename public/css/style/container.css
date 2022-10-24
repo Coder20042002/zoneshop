@@ -46,19 +46,24 @@
 
 /*----------Card-list----------*/
 .card-list {
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
     transition: transform linear 0.1s;
     will-change: transform;
     margin-bottom: 10px;
+   
 }
 
-.card-list:hover{
+/* .card-list:hover{
     box-shadow: 0 1px 20px 0 rgb(0 0 0 / 5%);
     transform: translateY(-1px);
     cursor: pointer;
-}
+} */
+
 .card-img-top {
-   max-height: 460px;
+   max-height: 335px;
+   max-width: 100% ;
+   animation: ease-in 0.8s;
+   
 }
 
 .card {
