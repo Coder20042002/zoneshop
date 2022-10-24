@@ -11,10 +11,9 @@
 
             </div>
         </div>
-
         <div class="imgbuilt">
             <a href="#">
-                <img class="img-fluid" src="public/css/img/BANNER-AK-CHU.jpg" alt="">
+                <img class="img-fluid" src="public/css/img/Banner_ZoneShop.png" alt="">
             </a>
         </div>
         <div class="row">
