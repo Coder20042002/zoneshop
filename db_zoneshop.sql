@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2022 lúc 03:40 PM
+-- Thời gian đã tạo: Th10 24, 2022 lúc 03:07 AM
 -- Phiên bản máy phục vụ: 10.4.25-MariaDB
 -- Phiên bản PHP: 8.1.10
 
@@ -120,7 +120,8 @@ CREATE TABLE `tbl_sanpham` (
   `id_bestseller` int(10) NOT NULL,
   `id_limit` int(10) NOT NULL,
   `id_dm` int(11) NOT NULL,
-  `id_hinhanh` int(10) NOT NULL
+  `id_hinhanh` int(10) NOT NULL,
+  `id_size` int(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -234,7 +235,6 @@ ALTER TABLE `tbl_danhmuc`
 ALTER TABLE `tbl_hinhanh_sanpham`
   ADD PRIMARY KEY (`id_hinhanh`);
 
-
 --
 -- Chỉ mục cho bảng `tbl_sanpham`
 --
@@ -269,7 +269,7 @@ ALTER TABLE `tbl_danhmuc`
 -- AUTO_INCREMENT cho bảng `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT cho bảng `tb_user`
@@ -281,5 +281,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
