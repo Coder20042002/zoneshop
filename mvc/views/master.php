@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="public/css/style/search.css">
     <link rel="stylesheet" href="public/css/style/login.css">
     <link rel="stylesheet" href="public/css/style/detail.css">
+    <link rel="stylesheet" href="public/css/style/cart.css">
     <link rel="stylesheet" href="themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/srcipt.js">
 
