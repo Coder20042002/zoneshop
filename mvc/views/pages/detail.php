@@ -59,7 +59,7 @@
         <span class='detail-content'>
         $rows->mota
         </span>
-    </h4>
+        </h4>
         ";
             }
             ?>
@@ -83,43 +83,57 @@
 
             <div class=" left-divider divider-blur"></div>
 
-            <div class="row">
-                <div class="option-select-size">
-                    <div class="option-main">
-                        <h5>SIZE</h5>
-                        <select class='option-size my-3'>
-                            <option class='option-item' value=''>Select Size</option>
-                            <?php
-                            while ($rows = mysqli_fetch_object($data["Size"])) {
-                                echo "
-                              <option class='option-item' value=''>$rows->ten</option>
+            <form action="cart?action=add" method="post">
+                <div class="row">
+                    <div class="option-select-size">
+                        <div class="option-main">
+                            <h5>SIZE</h5>
+                            <select class='option-size my-3' name="size[<?php $data["id_sp"] ?>]">
+                                <option class='option-item' value=''>Select Size</option>
+                                <?php
+                                while ($rows = mysqli_fetch_object($data["Size"])) {
+                                    echo "
+                               <option class='option-item' value=''>$rows->ten</option>
                               ";
-                            }
-                            ?>
+                                }
+                                ?>
                             </select>
 
-                    </div>
+                        </div>
 
-                    <div class="option-main">
-                        <h5>SỐ LƯỢNG</h5>
-                        <input class="input-number" type="number" value="1" min="1">
-                    </div>
+                        <div class="option-main">
+                            <h5>SỐ LƯỢNG</h5>
+                            <input class="input-number" type="number" value="1" min="1" name="soluong[<?=$data["id_sp"] ?>]">
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-            
+                <?php 
+                 while ($rows = mysqli_fetch_object($data["Product"])) {
+                    echo "
+                    <input type='hidden' value='" . $rows['id'] . " name='id'>
+                    <input type='hidden' value='" . $rows['ten'] . " name='ten'>
+                    <input type='hidden' value='" . $rows['gia'] . " name='gia'>
+                    <input type='hidden' value='" . $rows['hinhanh'] . " name='hinhanh'>
+                    ";
+                 }
+                 ?>
+                <div class="row grp-btn1">
+                    <input type="submit" name="action" class="buy-btn btn-addcart" value="Thêm vào giỏ"></input>
+                    <input type="submit" name="action" class="buy-btn btn-addcart" value="Thanh toán"></input>
+                </div>
+            </form>
 
 
 
 
-            <div class="row grp-btn1">
-            <button class="buy-btn btn-addcart">Thêm vào giỏ</button>
-            <button class="buy-btn btn-addcart">Thanh toán</button>
-            </div>
 
 
 
-            
+
+
+
+
 
             <div class="row info-product-size">
                 <span id="text-size-in4"> BẢNG SIZE </span>

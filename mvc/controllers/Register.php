@@ -1,4 +1,5 @@
 <?php
+session_start();
 class Register extends Controller {
     function SayHi(){
         

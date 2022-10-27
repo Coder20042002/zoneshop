@@ -80,7 +80,7 @@
                             </a>
                         </div>
                         <div class="header_navbar-icon--gr">
-                            <a href="#" class="header_navbar-icon-link">
+                            <a href="cart" class="header_navbar-icon-link">
                                 <i class="ti-shopping-cart header_navbar-icon--active"></i>
                             </a>
                         </div>

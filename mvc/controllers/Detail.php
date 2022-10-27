@@ -13,6 +13,7 @@ class Detail extends Controller {
             $key= $_GET["id"];
             $sp =$list->list_id_HinhAnh($key);
             $k =$list->list_id_HinhAnh($key);
+            $cart =$list->list_id_HinhAnh($key);
             
         }
 
@@ -30,7 +31,9 @@ class Detail extends Controller {
             "Image"=>$result,
             "Product"=>$sp,
             "gp"=>$k,
-            "DM"=>$dm
+            "DM"=>$dm,
+            "Cart"=>$cart,
+            "id_sp"=>$id
         ]);
        
     }
