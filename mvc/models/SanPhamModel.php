@@ -24,8 +24,8 @@ class SanPhamModel extends DB{
        return $this->chayTruyVanTraVeDL($this->truyvan1);
    }
 
+   
   
-
      //danh sach danh mục san pham
     function list_DM($key){
        $truyvan_dm = "SELECT * FROM tbl_sanpham where id_dm='$key' ";
@@ -42,10 +42,7 @@ class SanPhamModel extends DB{
      //danh sach hinh anh san pham
    function list_id_HinhAnh($key){
     $truyvan_dm = "SELECT * FROM tbl_sanpham where id_hinhanh='$key' ";
-    return mysqli_query($this->con,$truyvan_dm);
-        
-    
-    
+    return mysqli_query($this->con,$truyvan_dm);  
 }
 
  
