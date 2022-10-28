@@ -118,6 +118,7 @@
                     <div class="row">
                         <form action="cart?action=submit" method="post">
                             <?php
+                            $size=$data["Size"];
                             if (!empty($data["Product"])) {
                                 while ($rows = mysqli_fetch_array($data["Product"])) {
                                     $num = $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
@@ -139,12 +140,8 @@
                                                 <div class='option-select-size'>
                                                     <div class='option-main'>
                                                         <h5>SIZE</h5>
-                                                        <select class='option-size my-3 size-cart' name='size[$rows[id]]'>
-                                                            <option class='option-item' value=''>Select Size</option>
-                                                            <option class='option-item' value=''>XXL</option>
-                                                            <option class='option-item' value=''>XL</option>
-                                                            <option class='option-item' value=''>M</option>
-                                                            <option class='option-item' value=''>S</option>
+                                                        <select class='option-size my-3 size-cart' name='size'>
+                                                            <option class='option-item' value=''>.$size.</option>
                                                             
     
                                                         </select>
