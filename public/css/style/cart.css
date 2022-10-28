@@ -236,8 +236,9 @@ font-size: 1.6rem;
 font-weight: 700;
 }
 
-button.btn.btn-cart.btn-add-product-related {
+.btn.btn-cart.btn-add-product-related {
 background: var(--cart-color) !important;
+color:var(--white-color);
 }
 
 .pay-product {

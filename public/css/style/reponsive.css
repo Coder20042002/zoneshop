@@ -123,6 +123,12 @@
     }
 
     .cart-conten {
-         flex-direction: row; 
+         flex-direction: row !important; 
+    }
+
+
+    .info-img-item.img-warp {
+        width: 100% ;
+        height: 100%;
     }
 }

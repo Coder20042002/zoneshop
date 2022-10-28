@@ -26,8 +26,7 @@
                                                         <h4 class="media-heading">Gargoyle</h4>
                                                         <h5 class="price-silder">35.000 VND</h5>
                                                         <h5 class="button">
-                                                            <button data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1">THÊM
-                                                            </button>
+                                                            <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM">
                                                         </h5>
                                                     </div>
                                                 </div>
@@ -46,8 +45,7 @@
                                                         <h4 class="media-heading">Gargoyle</h4>
                                                         <h5 class="price-silder">35.000 VND</h5>
                                                         <h5 class="button">
-                                                            <button data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1">THÊM
-                                                            </button>
+                                                        <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM">
                                                         </h5>
                                                     </div>
                                                 </div>
@@ -71,8 +69,8 @@
                                                         <h4 class="media-heading">Gargoyle</h4>
                                                         <h5 class="price-silder">35.000 VND</h5>
                                                         <h5 class="button">
-                                                            <button data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1">THÊM
-                                                            </button>
+                                                            <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM" >
+                                                            </input>
                                                         </h5>
                                                     </div>
                                                 </div>
@@ -91,8 +89,8 @@
                                                         <h4 class="media-heading">Gargoyle</h4>
                                                         <h5 class="price-silder">35.000 VND</h5>
                                                         <h5 class="button">
-                                                            <button data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1">THÊM
-                                                            </button>
+                                                            <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM">
+                                                            </input>
                                                         </h5>
                                                     </div>
                                                 </div>
@@ -127,8 +125,8 @@
                                     <div class='allCart'>
                                     <div class='col-xs-12 col-sm-9 col-md-9 col-lg-9 item-2'>
                                         <div class='info'>
-                                            <div class='info-img'>
-                                                <img class='info-img-item' src='$rows[hinhanh]' alt=''>
+                                            <div class='info-img '>
+                                                <img class='info-img-item img-warp' src='$rows[hinhanh]' alt=''>
                                             </div>
     
                                             <div class='info-body'>
@@ -141,7 +139,7 @@
                                                 <div class='option-select-size'>
                                                     <div class='option-main'>
                                                         <h5>SIZE</h5>
-                                                        <select class='option-size my-3 size-cart' name='size'>
+                                                        <select class='option-size my-3 size-cart' name='size[$rows[id]]'>
                                                             <option class='option-item' value=''>Select Size</option>
                                                             <option class='option-item' value=''>XXL</option>
                                                             <option class='option-item' value=''>XL</option>
@@ -216,18 +214,19 @@
                                 <span>Đơn hàng</span>
                                 <span class='title-3-1 totalPriceOfCart'>
                                     <?php
-                                    $total = 0;
-                                   
-                                    while ($rows = mysqli_fetch_array($data["Result"])) {
+                                    if (!empty( $data["Result"])) {
+                                        $total = 0;
+                                        while ($rows = mysqli_fetch_array($data["Result"])) {
+                                            
+                                            $total = $total + $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
+                                            
+                                        }
                                         
-                                        $total = $total + $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
-                                        
+                                        echo"$total VND";
+                                        $data["Dipose"];
                                     }
-                                    
-                                    echo"$total VND";
-                                    $data["Dipose"];
                                     ?>
-                                    </span>
+                                    </span> 
                             </li>
                             <li class='list-cart-group text-2'>
                                 <span>Giảm</span>
@@ -238,6 +237,7 @@
                                 <span>TẠM TÍNH</span>
                                 <span class='tempPrice'>
                                     <?php
+                                    if (!empty($data["Total"])) {
                                     $total1 = 0;
                                    
                                     while ($rows = mysqli_fetch_array($data["Total"])) {
@@ -246,12 +246,13 @@
                                         
                                     }
                                     echo" $total1 VND";
+                                }
                                     ?> 
                                 </span>
                             </li>
 
                             <li class='list-cart-group'>
-                                <a href="payInfo" class='pay-product'>TIẾP TỤC THANH TOÁN</a>
+                                <a href="pay" class='pay-product'>TIẾP TỤC THANH TOÁN</a>
                             </li>
 
 

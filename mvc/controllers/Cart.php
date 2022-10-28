@@ -11,7 +11,7 @@ class Cart extends Controller {
 
          if(isset($_GET["action"])) {
             
-            
+            // var_dump($_SESSION["giohang"]);exit;
             switch($_GET["action"]) {
                 case "add":
                     
@@ -46,13 +46,14 @@ class Cart extends Controller {
          if(!empty( $_SESSION["giohang"])) {
             $product= $list->list_Cart();
             $result= $list->list_Cart();
+            
             $total=$list->list_Cart();
            
+         } else {
+            $result=null;
+            $total=null;
          }
-
-        // if(isset($_GET["action"])) {
-        //     var_dump($_POST);exit;
-        // } 
+       
         
 
         $this->view("master",[
