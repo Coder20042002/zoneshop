@@ -9,6 +9,7 @@ class Category extends Controller {
 
         //danh muc
         $result=null;
+        
         if (isset($_GET["dm"])) {
             $key= $_GET["dm"];
             $result =$list->list_DM($key);
