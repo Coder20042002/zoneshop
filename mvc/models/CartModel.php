@@ -4,7 +4,7 @@ class CartModel extends DB
     function Update($key=false) {
         foreach($_POST['soluong'] as $id_sp => $soluong) {
 
-            if($soluong==00) {
+            if($soluong==0) {
                 unset( $_SESSION["giohang"][$id_sp]);
             } else {
                 if($key) {
