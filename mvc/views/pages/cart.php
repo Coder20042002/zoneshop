@@ -139,7 +139,7 @@
     
                                                 <div class='option-select-size'>
                                                     <div class='option-main'>
-                                                        <h5>SIZE</h5>
+                                                        <h5>Size</h5>
                                                         <select class='option-size my-3 size-cart' name='size[$rows[id]]''>
                                                             <option class='option-item' value='". $_SESSION['giohang'][$rows['id']] . "'></option>
                                                             
@@ -149,7 +149,7 @@
                                                     </div>
     
                                                     <div class='option-main'>
-                                                        <h5>SỐ LƯỢNG</h5>
+                                                        <h5>Số lượng</h5>
                                                         <input class='input-number input-cart size-cart' name='soluong[$rows[id]]' type='number' value='" . $_SESSION['giohang'][$rows['id']] . "' min='1'>
                                                     </div>
     
@@ -168,8 +168,8 @@
                                             </div>
     
                                             
-                                            <a href='cart?action=delete&id=$rows[id]' class='btn btn-update' id='remove-product' name='remove' >Xoá</a>
-                                            <input type='submit'  class='btn btn-update' id='update-product' name='update' value='Cập nhật' ></input> 
+                                            <a href='cart?action=delete&id=$rows[id]' class='btn btn-update' id='remove-product' name='remove' >XÓA</a>
+                                            <input type='submit'  class='btn btn-update' id='update-product' name='update' value='CẬP NHẬT' ></input> 
                                                
                                            
                                         </div>
