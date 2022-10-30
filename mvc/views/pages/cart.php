@@ -119,6 +119,7 @@
                         <form action="cart?action=submit" method="post">
                             <?php
                             $size=$data["Size"];
+                            echo"$size";
                             if (!empty($data["Product"])) {
                                 while ($rows = mysqli_fetch_array($data["Product"])) {
                                     $num = $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
@@ -220,7 +221,7 @@
                                         }
                                         
                                         echo"$total VND";
-                                        $data["Dipose"];
+                                        
                                     }
                                     ?>
                                     </span> 

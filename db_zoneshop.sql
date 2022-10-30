@@ -24,6 +24,44 @@ CREATE DATABASE IF NOT EXISTS `db_zoneshop` DEFAULT CHARACTER SET utf8 COLLATE u
 USE `db_zoneshop`;
 -- --------------------------------------------------------
 
+CREATE TABLE `tbl_order` (
+  `id` int(100) NOT NULL,
+  `ten` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `sdt` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `điachia` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `thanhtien` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  ADD PRIMARY KEY (`id`);
+COMMIT;
+
+CREATE TABLE `tbl_order_detail` (
+  `id` int(11) NOT NULL,
+  `id_order` int(11) NOT NULL,
+  `id_sp` int(11) NOT NULL,
+  `soluong` int(11) NOT NULL,
+  `gia` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `tbl_order_detail`
+--
+ALTER TABLE `tbl_order_detail`
+  ADD PRIMARY KEY (`id`);
+COMMIT;
+
 --
 -- Cấu trúc bảng cho bảng `tbl_danhmuc`
 --
