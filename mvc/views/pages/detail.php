@@ -88,7 +88,7 @@
                     <div class="option-select-size">
                         <div class="option-main">
                             <h5>SIZE</h5>
-                            <select class='option-size my-3' name="size">
+                            <select class='option-size my-3' name="size[<?=$data["id_sp"] ?>]">
                                 <option class='option-item' value=''>Select Size</option>
                                 <?php
                                 while ($rows = mysqli_fetch_object($data["Size"])) {
@@ -115,7 +115,7 @@
                     <input type='hidden' value='" . $rows['ten'] . " name='ten'>
                     <input type='hidden' value='" . $rows['gia'] . " name='gia'>
                     <input type='hidden' value='" . $rows['hinhanh'] . " name='hinhanh'>
-                    <input type='hidden' value='" . $rows['id_size'] . " name='size'>
+                    
                     ";
                  }
                  ?>
