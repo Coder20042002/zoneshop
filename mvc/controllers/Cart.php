@@ -9,9 +9,9 @@ class Cart extends Controller {
         }
 
         $error=false;
-        $size=null;
+       
      
-        var_dump($_POST);exit;
+        
          if(isset($_GET["action"])) {
             
             // var_dump($_SESSION["giohang"]);exit;
@@ -63,8 +63,8 @@ class Cart extends Controller {
             "Page"=>"cart",
             "Product"=>$product,
             "Result"=>$result,
-            "Total"=>$total,
-            "Size"=>$size
+            "Total"=>$total
+            
         ]);
        
     }

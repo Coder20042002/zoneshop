@@ -118,11 +118,10 @@
                     <div class="row">
                         <form action="cart?action=submit" method="post">
                             <?php
-                            $size=$data["Size"];
-                            echo"$size";
+                            
                             if (!empty($data["Product"])) {
                                 while ($rows = mysqli_fetch_array($data["Product"])) {
-                                    $num = $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
+                                    $num = (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
                                     echo "
                                     <div class='allCart'>
                                     <div class='col-xs-12 col-sm-9 col-md-9 col-lg-9 item-2'>
@@ -141,8 +140,8 @@
                                                 <div class='option-select-size'>
                                                     <div class='option-main'>
                                                         <h5>SIZE</h5>
-                                                        <select class='option-size my-3 size-cart' name='size'>
-                                                            <option class='option-item' value=''>.$size.</option>
+                                                        <select class='option-size my-3 size-cart' name='size[$rows[id]]'>
+                                                            <option class='option-item' value='" . $_SESSION['giohang'][$rows['id']] . "'></option>
                                                             
     
                                                         </select>
@@ -216,7 +215,7 @@
                                         $total = 0;
                                         while ($rows = mysqli_fetch_array($data["Result"])) {
                                             
-                                            $total = $total + $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
+                                            $total = $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
                                             
                                         }
                                         
@@ -240,7 +239,7 @@
                                    
                                     while ($rows = mysqli_fetch_array($data["Total"])) {
                                         
-                                        $total1 = $total1 + $rows["gia"] * $_SESSION["giohang"][$rows["id"]];
+                                        $total1 = $total1 + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
                                         
                                     }
                                     echo" $total1 VND";
