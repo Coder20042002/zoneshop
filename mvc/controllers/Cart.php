@@ -9,19 +9,16 @@ class Cart extends Controller {
         }
 
         $error=false;
-        $size=null;
+       
      
-        var_dump($_POST);exit;
+        
          if(isset($_GET["action"])) {
             
             // var_dump($_SESSION["giohang"]);exit;
             switch($_GET["action"]) {
                 case "add":
-                    foreach($_POST['size'] as $id_sp => $size) {
-                        $_SESSION["giohang"][$id_sp]= $size;
-                       
-                    }
-                    var_dump($_SESSION["giohang"]);exit;
+                    
+                    
                     $list->Update(true);
                     header("Location: ./cart" );
                     
@@ -68,8 +65,8 @@ class Cart extends Controller {
             "Page"=>"cart",
             "Product"=>$product,
             "Result"=>$result,
-            "Total"=>$total,
-            "Size"=>$size
+            "Total"=>$total
+            
         ]);
        
     }
