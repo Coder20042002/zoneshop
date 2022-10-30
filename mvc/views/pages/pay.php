@@ -142,7 +142,7 @@
                         <span class="title-6-3">x 1</span>
                     </li>
 
-
+                    
 
 
                     <li class="list-cart-group divider-1"></li>

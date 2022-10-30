@@ -2,37 +2,38 @@
     display: flex;
     justify-content: center;
     padding-top: 90px;
-  }
-  
-  
-  .login-main {
-      width: 40%;
-      color: var(--black-color);
-      text-align: center;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
-  }
-  
+}
 
-  .login-user {
+
+.login-main {
+    width: 40%;
+    color: var(--black-color);
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+
+.login-user {
     padding: 0 30px;
 }
-  .heading-login {
-      font-size: 4rem;
+
+.heading-login {
+    font-size: 4rem;
       color: var(--black-color);
       text-align: center;
       padding-bottom: 0.8em;
-  }
-  
-  .login-input {
+}
+
+.login-input {
     display: flex;
     flex-direction: column;
-    align-items:baseline;
+    align-items: baseline;
     width: 100%;
-  }
-  
-  .input-warp {
+}
+
+.input-warp {
     outline: none;
     font-size: 1.5rem;
     font-weight: 400;
@@ -43,40 +44,38 @@
     margin: 0 0 20px;
     display: inline-block;
     width: 100%;
-  }
+}
 
-  .input-item {
+.input-item {
     display: flex;
     align-items: center;
     width: 100%;
-  }
+}
 
 
-  .icon-user {
+.icon-user {
     font-size: 1.8rem;
     padding-bottom: 18px;
     color: #19B0E7;
-    
-  }
 
-  .remember {
+}
+
+.remember {
     display: flex;
     align-items: center;
     width: 100%;
     font-size: 1.5rem;
     justify-content: space-between;
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 
 .checkbox1 {
     display: flex;
     justify-content: space-around;
-    width:30%;
+    width: 30%;
 }
 
-.forgot {
-    
-}
+.forgot {}
 
 .forgot h6 a {
     font-size: 1.5rem;
@@ -90,11 +89,12 @@
 
 
 
-.btn-log_reg,.sign-up h2:hover{
-    background-color:rgba(255, 51, 102,0.95);
+.btn-log_reg,
+.sign-up h2:hover {
+    background-color: rgba(255, 51, 102, 0.95);
 }
 
-.login-or    {
+.login-or {
     margin: 2rem 0;
 }
 
@@ -118,8 +118,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .btn-log_reg {
-    background:#ff3366;
+    background: #ff3366;
     color: #FFF;
     font-size: 26px;
     padding: 0.3em 1.2em;
@@ -139,7 +140,7 @@
 
 
 .login-social .login-link {
-    display: flex;  
+    display: flex;
     align-items: center;
     text-decoration: none;
     background-color: #19B0E7;
@@ -156,16 +157,16 @@
     border-radius: 3px;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 5px 5px;
-    
+
 }
 
 .login-social .login-link:hover {
-    background-color: rgba(27, 181, 236,0.95);
+    background-color: rgba(27, 181, 236, 0.95);
 }
 
 .login-social a h5 {
     border-left: 1px dotted #c3c3c3;
-    display: flex;  
+    display: flex;
     align-items: center;
     margin-bottom: 0;
     width: 100%;
@@ -193,16 +194,16 @@
 
 .cls_input {
     width: 60%;
-}   
+}
 
 .cls_caption {
     font-size: 1.8rem;
     font-weight: 300;
 }
 
-.input-reg  {
+.input-reg {
     justify-content: space-between;
-}  
+}
 
 .img_row {
     display: flex;
@@ -210,7 +211,7 @@
 }
 
 .btn-reg {
-    font-size: 1.8rem ;
+    font-size: 1.8rem;
 }
 
 .img_row {
@@ -220,8 +221,8 @@
 
 input.btn-reg.btn-log_reg {
     margin-bottom: 8px;
-}   
+}
 
 input.btn {
-    background-color: #fcd9e2!important;
+    background-color: #fcd9e2 !important;
 }

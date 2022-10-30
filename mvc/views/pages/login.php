@@ -3,7 +3,7 @@
    		<div class="col-12 col-md-12 col-xl-12">
    			<div class="login">
    				<div class="login-main">
-   					<h1 class="heading-login"> Login Form</h1>
+   					<h1 class="heading-login"> Đăng nhập tài khoản</h1>
 
    					<div class="login-user">
    						<form action="login/Xuli" method="post">

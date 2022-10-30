@@ -52,7 +52,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-4">
-                    <h3 class="footer-heading">Vào cữa hàng trên ứng dụng</h3>
+                    <h3 class="footer-heading">Vào cửa hàng trên ứng dụng</h3>
                     <div class="footer_download">
                         <img src="public/css/img/qrcode_30085226_.png" class="footer-qc_code" alt="">
                     </div>
