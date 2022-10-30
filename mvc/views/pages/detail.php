@@ -115,7 +115,7 @@
                     <input type='hidden' value='" . $rows['ten'] . " name='ten'>
                     <input type='hidden' value='" . $rows['gia'] . " name='gia'>
                     <input type='hidden' value='" . $rows['hinhanh'] . " name='hinhanh'>
-                    <input type='hidden' value='" . $rows['id_size'] . " name='size'>
+                    
                     ";
                  }
                  ?>
