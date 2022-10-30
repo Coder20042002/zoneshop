@@ -2,21 +2,23 @@
 class Cart extends Controller {
     function SayHi(){
         $list=$this->model("CartModel");
-        $list_size=$this->model("SizeModel");
+
         // $product=mysqli_fetch_assoc($list);
         if(!isset($_SESSION["giohang"])) {
             $_SESSION["giohang"]=array();
         }
 
         $error=false;
-        $size=null;
+       
      
-        var_dump($_POST);exit;
+        
          if(isset($_GET["action"])) {
             
             // var_dump($_SESSION["giohang"]);exit;
             switch($_GET["action"]) {
                 case "add":
+                    
+                    
                     $list->Update(true);
                     header("Location: ./cart" );
                     
@@ -63,8 +65,8 @@ class Cart extends Controller {
             "Page"=>"cart",
             "Product"=>$product,
             "Result"=>$result,
-            "Total"=>$total,
-            "Size"=>$size
+            "Total"=>$total
+            
         ]);
        
     }
