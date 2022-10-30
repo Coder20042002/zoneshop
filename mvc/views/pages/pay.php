@@ -7,11 +7,11 @@
 
 
                     <form id="orderForm">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cart-title title-border">THÔNG TIN GIAO HÀNG</div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cart-title1 title-border">THÔNG TIN GIAO HÀNG</div>
 
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="has-feedback">
-                                <input type="text" class="form-control" id="inputSuccess2" placeholder="HỌ TÊN" name="Name">
+                                <input type="text" class="form-control" id="inputSuccess2" placeholder="Họ và tên" name="Name">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
@@ -35,24 +35,24 @@
                             <select class="form-control" id="City" name="City">
                                 <option value="0">Tỉnh/ Thành Phố</option>
                                 <option value="">Đồng Tháp</option>
-                                
+
                             </select>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 form-group location">
                             <select class="form-control" id="District" name="District">
-                                <option value="0">Quận/ Huyện</option>
+                                <option class="pull-left1" value="0">Quận/ Huyện</option>
                             </select>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 form-group location">
                             <select class="form-control" id="Ward" name="Ward">
-                                <option value="0">Phường/ Xã</option>
+                                <option class="pull-right1" value="0">Phường/ Xã</option>
                             </select>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="ck1">
                                 <input type="checkbox" id="cb2" name="isNotification">
                                 <label for="cb2"></label>
-                                Cập nhật các thông tin mới nhất về chương trình từ Ananas
+                                Cập nhật các thông tin mới nhất về chương trình từ ZoneShop
                             </div>
                         </div>
 
@@ -68,7 +68,7 @@
                                 sẽ khác nhau. Chúng tôi luôn cố gắng để đơn hàng đến tay bạn sớm nhất.
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group title-right normal-fee">0 VNĐ</div>
+                        <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group title-right normal-fee">0 VNĐ</div> -->
 
 
 
@@ -116,9 +116,8 @@
 
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 main-cart-right">
                 <ul class="list-group">
-                    <li class="list-cart-group cart-title">ĐƠN HÀNG</li>
-                    
-                    <li class="list-cart-group divider"></li>
+                    <div class="cart-title1 title-border1">ĐƠN HÀNG</div>
+                    <div class=" left-divider divider-blur"></div>
 
                     <input type="hidden" value="713796" class="productDetailId">
                     <input type="hidden" value="Vintas Landforms - Low Top" class="productName">
@@ -143,34 +142,31 @@
                         <span class="title-6-3">x 1</span>
                     </li>
 
-                    <div class=" left-divider divider-blur"></div>
 
-                    
+
+
                     <li class="list-cart-group divider-1"></li>
                     <li class="list-cart-group text-1">
                         <span class="title-3">Đơn hàng</span>
-                        <span class="title-3-1"><span class="current-price"> 720.000</span> VND</span>
+                        <span class="title-3-1"><span class="current-price"> 720.000</span></span>
                     </li>
-                    <li class="list-cart-group text-2-2">
-                        <span class="title-3">Giảm</span>
-                        <span class="title-4-1">- <span class="discount">0</span> VND</span>
-                    </li>
+
                     <li class="list-cart-group text-2-3">
                         <span class="title-21">Phí vận chuyển</span>
-                        <span class="title-22"><span class="shipping-fee">0</span> VND</span>
+                        <span class="title-22"><span class="shipping-fee">0</span></span>
                     </li>
                     <li class="list-cart-group text-2-3">
                         <span class="title-21">Phí thanh toán</span>
-                        <span class="title-22"><span class="card-fee">0</span> VND</span>
+                        <span class="title-22"><span class="card-fee">0</span></span>
                     </li>
 
                     <li class="list-cart-group divider-1"></li>
                     <li class="list-cart-group">
                         <span class="title-5">TỔNG CỘNG</span>
-                        <span class="title-5-2"><span class="total-price">720.000</span> VND</span>
+                        <span class="title-5-2"><span class="total-price">720.000</span></span>
                     </li>
                     <li class="list-cart-group">
-                        <input type="submit" class="btn btn-cart btn-complete-detail" value="HOÀN TẤT ĐẶT HÀNG" name="pay" >
+                        <input type="submit" class="btn btn-cart btn-complete-detail" value="HOÀN TẤT ĐẶT HÀNG" name="pay">
                         </input>
                     </li>
                 </ul>
@@ -178,3 +174,133 @@
         </div>
     </div>
 </div>
+
+<style>
+    .form-group {
+        margin-bottom: 1.9rem;
+    }
+
+    .main-cart-left .form-group {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+
+    .form-control {
+        border-radius: 0px;
+        font-size: 1.7rem;
+    }
+
+    .main-cart-left .title-border {
+        color: #000;
+        background-color: #f1f1f1;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0px 0px 20px 0px;
+        padding: 5px 20px 5px 20px;
+    }
+
+    .main-cart-left .title-1 {
+        color: #000;
+        background-color: #f1f1f1;
+        font-size: 2.2rem;
+        margin: 20px 0px 20px 0px;
+        padding: 5px 20px 5px 20px;
+        font-weight: 700;
+    }
+
+
+
+    .ck1 {
+        position: relative;
+        /* padding-left: 40px; */
+        font-size: 1.7rem;
+        color: #000;
+        margin: 25px 0 25px 0;
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        height: calc(3.3rem + 2px);
+    }
+
+    .main-cart-right .title-border1 {
+        color: #000;
+        font-size: 2.2rem;
+        margin: 0px 0px 20px 0px;
+        font-weight: 700;
+    }
+
+
+
+    .main-cart-right .list-group {
+        /* background-color: #f1f1f1; */
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+
+    span.title-6 {
+        font-size: 1.7rem;
+    }
+
+    span.title-6-2 {
+        font-size: 1.6rem;
+        color: #808080;
+    }
+
+    span.title-6-3 {
+        font-size: 1.6rem;
+        color: #808080;
+    }
+
+    span.title-3 {
+        font-size: 1.7rem;
+    }
+
+    span.title-21 {
+        font-size: 1.7rem;
+        font-weight: 640;
+    }
+
+    span.title-22 {
+        font-size: 1.7rem;
+    }
+
+    .main-cart-right .list-cart-group .title-5 {
+        color: #000;
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+
+    .main-cart-right .list-cart-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    span.total-price {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: #ee4266;
+        float: right;
+    }
+
+    span.shipping-fee {
+        float: right;
+    }
+
+    span.card-fee {
+        float: right;
+    }
+
+    .btn.btn-cart.btn-complete-detail {
+        font-weight: 500;
+        color: var(--white-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        width: 100%;
+        float: left;
+        height: 60px;
+        margin-top: 10px;
+    }
+</style>
