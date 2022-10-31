@@ -23,12 +23,9 @@ class Cart extends Controller {
                     
                     foreach($_POST['size'] as $id => $size) {
                         $_SESSION["size"][$id]=$size;
-                    }
-                    var_dump($_SESSION["size"]);
-                    
-                    
+                    }                                       
                     $list->Update(true);
-                    var_dump($_SESSION["giohang"]);exit;
+                    
                     header("Location: ./cart" );
                     
                     break;
