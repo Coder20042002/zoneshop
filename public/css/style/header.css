@@ -135,13 +135,13 @@
         top: -10px;
         left: 0;
         position: absolute;
-    
 
 }
  
 .subnav-login {
     width: calc(100% + 90px);
-    top:140%
+    z-index:2;
+    top:140%;
 }
 
 .header_navbar-icon {

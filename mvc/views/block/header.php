@@ -75,8 +75,8 @@
             <i class="fa-regular fa-user header_navbar-icon--active"></i>
           </a>
           <ul class="subnav subnav-login ">
-            <li class="subnav-item"><a class="subnav-link" href="#">Đăng nhập</a></li>
-            <li class="subnav-item"><a class="subnav-link" href="#">Đăng ký</a></li>
+            <li class="subnav-item"><a class="subnav-link" href="login">Đăng nhập</a></li>
+            <li class="subnav-item"><a class="subnav-link" href="register">Đăng ký</a></li>
             <li class="subnav-item"><a class="subnav-link" href="#">Đăng xuất</a></li>
             
           </ul>
