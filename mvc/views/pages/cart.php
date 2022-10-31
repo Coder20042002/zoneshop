@@ -141,7 +141,7 @@
                                                     <div class='option-main'>
                                                         <h5>Size</h5>
                                                         <select class='option-size my-3 size-cart' name='size[$rows[id]]''>
-                                                            <option class='option-item' value='". $_SESSION['giohang'][$rows['id']] . "'></option>
+                                                            <option class='option-item' value='". $_SESSION['size'][$rows['id']] . "'>".$_SESSION['size'][$rows['id']]."</option>
                                                             
     
                                                         </select>

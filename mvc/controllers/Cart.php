@@ -7,6 +7,9 @@ class Cart extends Controller {
         if(!isset($_SESSION["giohang"])) {
             $_SESSION["giohang"]=array();
         }
+        if(!isset($_SESSION["size"])) {
+            $_SESSION["size"]=array();
+        }
 
         $error=false;
        
@@ -18,8 +21,14 @@ class Cart extends Controller {
             switch($_GET["action"]) {
                 case "add":
                     
+                    foreach($_POST['size'] as $id => $size) {
+                        $_SESSION["size"][$id]=$size;
+                    }
+                    var_dump($_SESSION["size"]);
+                    
                     
                     $list->Update(true);
+                    var_dump($_SESSION["giohang"]);exit;
                     header("Location: ./cart" );
                     
                     break;
