@@ -1,0 +1,128 @@
+.form-group {
+    margin-bottom: 1.9rem;
+}
+
+.main-cart-left .form-group {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.form-control {
+    border-radius: 0px;
+    font-size: 1.7rem !important;
+}
+
+.main-cart-left .title-border {
+    color: #000;
+    background-color: #f1f1f1;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
+    padding: 5px 20px 5px 20px;
+}
+
+.main-cart-left .title-1 {
+    color: #000;
+    background-color: #f1f1f1;
+    font-size: 2.2rem;
+    margin: 20px 0px 20px 0px;
+    padding: 5px 20px 5px 20px;
+    font-weight: 700;
+}
+
+
+
+.ck1 {
+    position: relative;
+    /* padding-left: 40px; */
+    font-size: 1.7rem;
+    color: #000;
+    margin: 25px 0 25px 0;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(3.3rem + 2px) !important;
+}
+
+.main-cart-right .title-border1 {
+    color: #000;
+    font-size: 2.2rem;
+    margin: 0px 0px 20px 0px;
+    font-weight: 700;
+}
+
+
+
+.main-cart-right .list-group {
+    /* background-color: #f1f1f1; */
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+span.title-6 {
+    font-size: 1.7rem;
+}
+
+span.title-6-2 {
+    font-size: 1.6rem;
+    color: #808080;
+}
+
+span.title-6-3 {
+    font-size: 1.6rem;
+    color: #808080;
+}
+
+span.title-3 {
+    font-size: 1.7rem;
+}
+
+span.title-21 {
+    font-size: 1.7rem;
+    font-weight: 640;
+}
+
+span.title-22 {
+    font-size: 1.7rem;
+}
+
+.main-cart-right .list-cart-group .title-5 {
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.main-cart-right .list-cart-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+span.total-price {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: red;
+    float: right;
+}
+
+span.shipping-fee {
+    float: right;
+}
+
+span.card-fee {
+    float: right;
+}
+
+.btn.btn-cart.btn-complete-detail {
+    font-weight: 500;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    width: 100%;
+    float: left;
+    height: 60px;
+    margin-top: 10px;
+    background-color: var(--primary-color) !important;
+}
