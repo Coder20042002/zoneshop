@@ -63,7 +63,7 @@
    max-height: 335px;
    max-width: 100% ;
    animation: ease-in 0.8s;
-   
+   object-fit: cover;
 }
 
 .card {
