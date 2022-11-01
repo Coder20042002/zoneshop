@@ -55,7 +55,7 @@
       </div>
       <div class="col-3  ">
         <div class="header__with--search">
-          <form class="header__search" action="./search" method="post">
+          <form class="header__search" action="./search" method="get">
 
             <input type="text" class="header__search--input" name="keyword" placeholder="Nhập sản phẩm cần tìm...">
             <button type="submit" class="header__search-btn">

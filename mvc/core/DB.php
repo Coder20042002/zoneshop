@@ -1,5 +1,5 @@
 <?php
-
+define("SO_SP_TREN_TRANG", 6);
 class DB{
 
     public $con;
@@ -44,27 +44,27 @@ class DB{
 		}
 	}
 
-function executeNonQuery($q)
-{
+// function executeNonQuery($q)
+// {
 	
-	$result = mysqli_query($this->con,$q);
-	giaiPhongBoNho($this->con,$q);
-	return $result;
-}
+// 	$result = mysqli_query($this->con,$q);
+// 	giaiPhongBoNho($this->con,$q);
+// 	return $result;
+// }
 
-function executeQuery($q)
-{
-	$result = mysqli_query($this->con,$q);
-	giaiPhongBoNho($this->con,$q);
-	return $result;
-}
+// function executeQuery($q)
+// {
+// 	$result = mysqli_query($this->con,$q);
+// 	giaiPhongBoNho($this->con,$q);
+// 	return $result;
+// }
 	
-function stringSQL($string)
-{
-	mysqli_real_escape_string($this->con, $string);
-	giaiPhongBoNho($this->con,$string);
-	return $string;
-}
+// function stringSQL($string)
+// {
+// 	mysqli_real_escape_string($this->con, $string);
+// 	giaiPhongBoNho($this->con,$string);
+// 	return $string;
+// }
 
 	
 }
