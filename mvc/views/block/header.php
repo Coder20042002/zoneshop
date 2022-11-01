@@ -27,10 +27,12 @@
                   <i class="header_navbar--main-list-icon ti-angle-down"></i>
                 </a>
                 <ul class="subnav">
-                  <li class="subnav-item"><a class="subnav-link" href="#">Áo thun</a></li>
-                  <li class="subnav-item"><a class="subnav-link" href="#">Áo khoác</a></li>
-                  <li class="subnav-item"><a class="subnav-link" href="#">Quần dài</a></li>
-                  <li class="subnav-item"><a class="subnav-link" href="#">Quần sọt</a></li>
+                  
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=1">Áo thun</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=2">Áo sơ mi</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=3">Áo khoác</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=4">Quần tây</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=5">Quần sọt</a></li>
                 </ul>
 
               </li>

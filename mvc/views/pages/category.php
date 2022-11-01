@@ -80,9 +80,9 @@
                                 <span class="nav-tree-item__icon ti-angle-down"></span>
                             </lable>
                             <ul class="suv-tree-list">
-                                
+
                                 <li class="suv-tree-item">
-                                    
+
                                     <label class="suv-lable">
                                         <!-- <input name="list-option" class="option" type="checkbox" value="" hidden=""> -->
                                         Limited Edition
@@ -90,7 +90,7 @@
                                     </label>
                                     </a>
                                 </li>
-                                
+
                                 <li class="suv-tree-item">
                                     <label class="suv-lable">
                                         <input name="list-option" class="option" type="checkbox" value="" hidden="">
@@ -109,11 +109,11 @@
                             </lable>
                             <ul class="suv-tree-list">
                                 <?php
-                                while($rows = mysqli_fetch_object($data["list_DM"])){
+                                while ($rows = mysqli_fetch_object($data["list_DM"])) {
                                     echo "
                                     
                                 <li class='suv-tree-item'>
-                                <a href='category/?dm=".$rows->id_dm."'>
+                                <a href='category/?dm=" . $rows->id_dm . "'>
                                     <label class='suv-lable'>
              
                                         $rows->ten
@@ -122,10 +122,11 @@
                                 </a>
                                 </li>
                                 
-                                    ";}
-                                 ?>
-                                
-                               
+                                    ";
+                                }
+                                ?>
+
+
 
                             </ul>
                         </li>
@@ -136,31 +137,54 @@
                                 <span class="nav-tree-item__icon ti-angle-down"></span>
                             </lable>
                             <ul class="suv-tree-list">
-                            <!-- <?php
-                                while($rows = mysqli_fetch_object($data["Attribute"])){
-                                    echo "
-                                    
-                                <li class='suv-tree-item'>
-                                <a href='category/?dm=".$rows->id_att."'>
-                                    <label class='suv-lable'>
-             
-                                        $rows->price
-                                        <span class='glyphicon'></span>
-                                    </label>
-                                </a>
-                                </li>
+                            
                                 
-                                    ";}
-                                 ?> -->
-                                 
+                                
+
 
                                 <li class="suv-tree-item">
                                     <a href="category/?attribute=500k-599k">
-                                    <label class="suv-lable">
-                                        <input name="list-option" class="option" type="checkbox" value="" hidden="">
-                                        500k - 599k
-                                        <span class="glyphicon"></span>
-                                    </label>
+                                        <label class="suv-lable">
+                                            <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                            > 600k
+                                            <span class="glyphicon"></span>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="suv-tree-item">
+                                    <a href="category/?attribute=500k-599k">
+                                        <label class="suv-lable">
+                                            <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                            400k - 499k
+                                            <span class="glyphicon"></span>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="suv-tree-item">
+                                    <a href="category/?attribute=500k-599k">
+                                        <label class="suv-lable">
+                                            <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                            300k - 399k
+                                            <span class="glyphicon"></span>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="suv-tree-item">
+                                    <a href="category/?attribute=500k-599k">
+                                        <label class="suv-lable">
+                                            <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                            200k - 299k
+                                            <span class="glyphicon"></span>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="suv-tree-item">
+                                    <a href="category/?attribute=500k-599k">
+                                        <label class="suv-lable">
+                                            <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                            < 200
+                                            <span class="glyphicon"></span>
+                                        </label>
                                     </a>
                                 </li>
 
@@ -175,20 +199,21 @@
                                 <span class="nav-tree-item__icon ti-angle-down"></span>
                             </lable>
                             <ul class="suv-tree-list size-list">
-                            <?php
-                                while($rows = mysqli_fetch_object($data["Size"])){
+                                <?php
+                                while ($rows = mysqli_fetch_object($data["Size"])) {
                                     echo "
                                     
                                 <li class='suv-tree-item'>
-                                <a href='category/?size=".$rows->id_size."'>
+                                <a href='category/?size=" . $rows->id_size . "'>
                                     <label class='suv-lable size'>
                                     $rows->ten
                                     </label>
                                 </a>
                                 </li>
                                 
-                                    ";}
-                                 ?>
+                                    ";
+                                }
+                                ?>
 
 
                             </ul>
@@ -242,34 +267,34 @@
 
 
 
-                        while ($rows = mysqli_fetch_object($data["Danhmuc"])) {
+                        while ($rows = mysqli_fetch_object($data["Paging"])) {
                             echo
                             "<div class='col-12 col-md-6 col-xl-4'>
-                            <div class='card-list'>
-                            <a href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
-                    <div class='card'>
+                               <div class='card-list'>
+                                  <a href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
+                                        <div class='card'>
                         
 
-                       <img class='card-img-top' onmouseover='this.src=\"$rows->hinh1\"' '.
-                        '    onmouseout='this.src=\"$rows->hinhanh\"' '.
-                        '    src='$rows->hinhanh' />
-                        
-                        
-                        
-                        
-                        <div class='card-body'>
-                            <h5 class='card-title'>$rows->ten</h5>
-                            <p>
-                                <span class='card-price-text'>Giá bán : </span>
-                                <span class='card-price'>$rows->gia đ</span>
-                            </p>
-                            <button class='btn btn-primary'>Mua ngay</button>
-                        </div>
-                    </div>
-                 </a> 
-                           </div>
+                                            <img class='card-img-top' onmouseover='this.src=\"$rows->hinh1\"' '.
+                                            '    onmouseout='this.src=\"$rows->hinhanh\"' '.
+                                            '    src='$rows->hinhanh' />
+                            
+                            
+                            
+                            
+                                            <div class='card-body'>
+                                                <h5 class='card-title'>$rows->ten</h5>
+                                                <p>
+                                                    <span class='card-price-text'>Giá bán : </span>
+                                                    <span class='card-price'>$rows->gia đ</span>
+                                                </p>
+                                                <button class='btn btn-primary'>Mua ngay</button>
+                                            </div>
+                                        </div>
+                                   </a> 
+                                </div>
 
-                    </div>";
+                            </div>";
                         }
 
 
@@ -281,10 +306,20 @@
 
                 </div>
 
-                <?php 
-                 ?>
-                
-                
+
+                <?php
+                $total = $data["Total"];
+                $page = $data["Padi"];
+                echo "<div class='pager'>";
+                for ($i = 1; $i <= (float)$total; $i++)
+                    if ($i != $page)
+                        echo " <a href='category/?page=" . $i . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'>$i</a> ";
+                    else
+                        echo "<span>$i</span>";
+                echo "</div>";
+                ?>
+
+
 
 
 
@@ -294,7 +329,6 @@
 
 
 
-        
+
 
     </div>
-    

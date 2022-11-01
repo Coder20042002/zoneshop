@@ -13,8 +13,18 @@ class SanPhamModel extends DB{
         return mysqli_query($this->con,$truyvan_page);
     }
 
+    function dm_Page($key,$from,$page){
+        $dm_page="SELECT * FROM tbl_sanpham WHERE id_dm=" . $key. " limit " . $from . ", " . $page;
+        return mysqli_query($this->con,$dm_page);
+    }
+
     function count_Page($key){
         $truyvan_Count = "SELECT count(*) from tbl_sanpham where ten like '%".$key."%' ";
+       return mysqli_query($this->con,$truyvan_Count);
+    }
+
+    function count_dm_Page($key){
+        $truyvan_Count = "SELECT count(*) from tbl_sanpham where id_dm=".$key."";
        return mysqli_query($this->con,$truyvan_Count);
     }
 

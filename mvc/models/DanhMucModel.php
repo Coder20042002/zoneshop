@@ -11,5 +11,12 @@ class DanhMucModel extends DB{
         return mysqli_query($this->con,$truyvan_dm);
     }
     
+
+    //phan trang
+    
+
+    
+
+    
 }
 ?>
