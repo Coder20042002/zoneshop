@@ -2,6 +2,9 @@
 class Cart extends Controller {
     function SayHi(){
         $list=$this->model("CartModel");
+       
+        
+
 
         // $product=mysqli_fetch_assoc($list);
         if(!isset($_SESSION["giohang"])) {
@@ -12,14 +15,15 @@ class Cart extends Controller {
         }
 
         $error=false;
-       
-     
+        
+        
         
          if(isset($_GET["action"])) {
             
             // var_dump($_SESSION["giohang"]);exit;
             switch($_GET["action"]) {
                 case "add":
+                    
                     
                     foreach($_POST['size'] as $id => $size) {
                         $_SESSION["size"][$id]=$size;
