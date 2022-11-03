@@ -27,10 +27,12 @@
                   <i class="header_navbar--main-list-icon ti-angle-down"></i>
                 </a>
                 <ul class="subnav">
-                  <li class="subnav-item"><a class="subnav-link" href="#">Áo thun</a></li>
-                  <li class="subnav-item"><a class="subnav-link" href="#">Áo khoác</a></li>
-                  <li class="subnav-item"><a class="subnav-link" href="#">Quần dài</a></li>
-                  <li class="subnav-item"><a class="subnav-link" href="#">Quần sọt</a></li>
+                  
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=1">Áo thun</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=2">Áo sơ mi</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=3">Áo khoác</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=4">Quần tây</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=5">Quần sọt</a></li>
                 </ul>
 
               </li>
@@ -55,7 +57,7 @@
       </div>
       <div class="col-3  ">
         <div class="header__with--search">
-          <form class="header__search" action="./search" method="post">
+          <form class="header__search" action="./search" method="get">
 
             <input type="text" class="header__search--input" name="keyword" placeholder="Nhập sản phẩm cần tìm...">
             <button type="submit" class="header__search-btn">
