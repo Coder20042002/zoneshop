@@ -108,6 +108,8 @@
 
             while ($rows = mysqli_fetch_object($data["list_BestSeller"])) {
 
+                $price=$rows->gia;
+                $price=number_format($price);
                 $string =  '<img onmouseover="this.src=\'$rows->hinh1\'" '.' onmouseout="this.src=\'$rows->hinhanh\'" '.'    src="this.src=\'$rows->hinhanh\'" />'.'    \';';
 
                 echo
@@ -129,7 +131,7 @@
                             <h5 class='card-title'>$rows->ten</h5>
                             <p>
                                 <span class='card-price-text'>Giá bán : </span>
-                                <span class='card-price'>$rows->gia đ</span>
+                                <span class='card-price'> $price đ</span>
                             </p>
                             <button class='btn btn-primary'>Mua ngay</button>
                         </div>

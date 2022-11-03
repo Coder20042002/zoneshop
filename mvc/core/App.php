@@ -8,6 +8,7 @@ class App{
 
     function __construct()
     {
+        
          $arr=$this->UrlProcess();
          
 

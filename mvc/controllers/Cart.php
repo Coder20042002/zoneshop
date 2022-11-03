@@ -52,7 +52,7 @@ class Cart extends Controller {
                     
             }
          }
-         
+         $product=null;
          if(!empty( $_SESSION["giohang"])) {
             $product= $list->list_Cart();
             

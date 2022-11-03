@@ -134,7 +134,7 @@ span.price {
 
 .cart-gr-main {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
 }
 
 a#remove-product {

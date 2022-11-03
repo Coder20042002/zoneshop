@@ -27,7 +27,7 @@
                   <i class="header_navbar--main-list-icon ti-angle-down"></i>
                 </a>
                 <ul class="subnav">
-                  
+
                   <li class="subnav-item"><a class="subnav-link" href="./category?dm=1">Áo thun</a></li>
                   <li class="subnav-item"><a class="subnav-link" href="./category?dm=2">Áo sơ mi</a></li>
                   <li class="subnav-item"><a class="subnav-link" href="./category?dm=3">Áo khoác</a></li>
@@ -80,14 +80,77 @@
             <li class="subnav-item"><a class="subnav-link" href="login">Đăng nhập</a></li>
             <li class="subnav-item"><a class="subnav-link" href="register">Đăng ký</a></li>
             <li class="subnav-item"><a class="subnav-link" href="#">Đăng xuất</a></li>
-            
+
           </ul>
 
         </div>
-        <div class="header_navbar-icon--gr">
+        <div class="header_navbar-icon--gr heading-cart">
           <a href="cart" class="header_navbar-icon-link">
             <i class="ti-shopping-cart header_navbar-icon--active"></i>
           </a>
+          <span class="count-cart">
+            <?php
+            if (!empty($_SESSION["giohang"])) {
+              $cart = (isset($_SESSION['giohang'])) ? $_SESSION['giohang'] : 0;
+              echo count($cart);
+            } else echo 0;
+
+            ?>
+          </span>
+          <div class="header-action_dropdown">
+            <span class="box-triangle">
+              
+            </span>
+            <div class="header-dropdown_content">
+              <div class="site-cart">
+                <div class="cart-ttbold">
+                  <p class="ttbold">Giỏ hàng</p>
+                </div>
+                <div class="cart-view clearfix">
+                  <div class="cart-view-scroll">
+                    <table id="clone-item-cart" class="table-clone-cart">
+                      <tbody>
+                        <tr class="item_2 hidden">
+                          <td class="img-cart-view"><a href="#" title="#"><img src="//product.hstatic.net/200000312481/product/f3a03cf4-d806-412e-be17-f91053a4addb_6a54944685ec4208a8752dec361deeea_small.jpeg" alt="#"></a></td>
+                          <td class="cart-pro">
+                            <p class="pro-title">
+                              <a class="pro-title-view" href="#" title="#">BASIC SHORT / BROWN COLOR</a>
+                              <span class="variant">Size: S</span>
+                            </p>
+                            <div class="mini-cart_quantity">
+                              <div class="pro-quantity-view"><span class="qty-value">1</span></div>
+                              <div class="pro-price-view">189,000₫</div>
+                            </div>
+                            
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   
+                  </div>
+                  <div class="line"></div>
+                  <div class="cart-view-total">
+                    <table class="table-total">
+                      <tbody>
+                        <tr class="total-cart">
+                          <td class="text-left">TỔNG TIỀN:</td>
+                          <td class="text-right" id="total-view-cart">189,000₫</td>
+                        </tr>
+                        <tr class="total-cart">
+                          <td><a href="/cart" class=" btn-color-white">Xem giỏ hàng</a></td>
+                          <td><a href="/checkout" class="btn-color-white">Thanh toán</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
         </div>
 
 

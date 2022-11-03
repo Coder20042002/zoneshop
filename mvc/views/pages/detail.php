@@ -35,13 +35,15 @@
 
             <?php
             while ($rows = mysqli_fetch_object($data["Product"])) {
+                $price=$rows->gia;
+                $price=number_format($price);
                 echo "
                     <h3 class='name-product py-4'>$rows->ten</h3>
                     <h6 class='detail'>
                         <span class='pull-left'>Mã sản phẩm: <strong>A00$rows->id</strong></span>
                         <span class='pull-right'>Tình trạng: <strong>Còn hàng</strong></span>
                     </h6>
-                    <h2 class='product-price'>$rows->gia VNĐ</h2>
+                    <h2 class='product-price'>$price VNĐ</h2>
                     ";
             }
 

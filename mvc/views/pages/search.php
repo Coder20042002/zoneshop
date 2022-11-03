@@ -13,7 +13,7 @@
                 while ($rows = mysqli_fetch_array($data["count"])) {
                     //dùng count để đếm tổng số phần tử trong mảng
                     echo "
-                   <div class='count-product'>
+                   <div class='count-product' >
                        <span class='count-product__content'>TÌM THẤY</span>
                        <span class='count-product__content'>$rows[0] </span>
                        <span class='count-product__content'>KẾT QUẢ CHO </span>
@@ -24,6 +24,8 @@
                 }
 
                 while ($rows = mysqli_fetch_object($data["Result"])) {
+                    $price=$rows->gia;
+                    $price=number_format($price);
                     echo
                     "   
                     
@@ -44,7 +46,7 @@
                                 <h5 class='card-title'>$rows->ten</h5>
                                 <p>
                                     <span class='card-price-text'>Giá bán : </span>
-                                    <span class='card-price'>$rows->gia đ</span>
+                                    <span class='card-price'> $price đ</span>
                                 </p>
                                 <button class='btn btn-primary'>Mua ngay</button>
                             </div>
@@ -104,3 +106,20 @@
 
     </div>
 </div>
+<script>
+        function showUser(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    };
+                };
+                xmlhttp.open("GET", "getuser.php?id=" + str, true);
+                xmlhttp.send();
+            };
+        }
+</script>

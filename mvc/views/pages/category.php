@@ -268,6 +268,8 @@
 
 
                         while ($rows = mysqli_fetch_object($data["Paging"])) {
+                            $price=$rows->gia;
+                            $price=number_format($price);
                             echo
                             "<div class='col-12 col-md-6 col-xl-4'>
                                <div class='card-list'>
@@ -286,7 +288,7 @@
                                                 <h5 class='card-title'>$rows->ten</h5>
                                                 <p>
                                                     <span class='card-price-text'>Giá bán : </span>
-                                                    <span class='card-price'>$rows->gia đ</span>
+                                                    <span class='card-price'>$price đ</span>
                                                 </p>
                                                 <button class='btn btn-primary'>Mua ngay</button>
                                             </div>
@@ -332,3 +334,4 @@
 
 
     </div>
+    

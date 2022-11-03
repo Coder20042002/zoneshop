@@ -121,7 +121,10 @@
                            
                             if (!empty($data["Product"])) {
                                 while ($rows = mysqli_fetch_array($data["Product"])) {
+                                    $price=$rows["gia"];
+                                    $price=number_format($price);
                                     $num = (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                                    $num=number_format($num);
                                     echo "
                                     <div class='allCart'>
                                     <div class='col-xs-12 col-sm-9 col-md-9 col-lg-9 item-2'>
@@ -134,7 +137,7 @@
                                                 <h3 class='info-heading'>
                                                 $rows[ten]</h3>
                                                 <p class='info-price'>Giá:
-                                                <p class='price-porduct'>$rows[gia]VND </p>
+                                                <p class='price-porduct'>$price VND </p>
                                                 </p>
     
                                                 <div class='option-select-size'>
@@ -178,6 +181,15 @@
                                 </div>
                                 <div class='left-divider divider-blur cart-warp'></div>";
                                 }
+                            } else {
+                                echo "
+                                <div class='cart-zero'>
+                                    <div class='cart-zero-heading'> Bạn chưa chọn sản phẩm.</div>
+                                    <img src='public/css/img/cart-zero.png' alt='Không có sản phẩm nào' >
+                                    <div class='cart-zero-info'> Hãy nhanh tay chọn ngay sản phẩm yêu thích.</div>
+                                
+                                </div>
+                                 ";
                             }
 
                             ?>
@@ -213,12 +225,14 @@
                                     <?php
                                     if (!empty( $data["Result"])) {
                                         $total = 0;
+                                        
                                         while ($rows = mysqli_fetch_array($data["Result"])) {
                                             
                                             $total = $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
                                             
+                                            
                                         }
-                                        
+                                        $total=number_format($total);
                                         echo"$total VND";
                                         
                                     }
@@ -235,14 +249,15 @@
                                 <span class='tempPrice'>
                                     <?php
                                     if (!empty($data["Total"])) {
-                                    $total1 = 0;
+                                    $total = 0;
                                    
                                     while ($rows = mysqli_fetch_array($data["Total"])) {
                                         
-                                        $total1 = $total1 + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                                        $total = $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
                                         
                                     }
-                                    echo" $total1 VND";
+                                    $total=number_format($total);
+                                    echo" $total VND";
                                 }
                                     ?> 
                                 </span>
