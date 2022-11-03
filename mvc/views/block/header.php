@@ -159,6 +159,16 @@
                                   </table>
                               </div>
                         ";}}
+                        else {
+                          echo "
+                          <div class='cart-zero'>
+                              <div class='cart-zero-heading'> Bạn chưa chọn sản phẩm.</div>
+                              <img src='public/css/img/cart-zero.png' alt='Không có sản phẩm nào' >
+                              <div class='cart-zero-info'> Hãy nhanh tay chọn ngay sản phẩm yêu thích.</div>
+                          
+                          </div>
+                           ";
+                        }
                    ?>
                   
                   
