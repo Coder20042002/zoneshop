@@ -356,6 +356,7 @@
     padding: 20px;
     display: none;
     margin-top: 6px;
+    box-shadow: 0 0 10px rgba(0, 0 ,0, 0.3);
 }
 
 .header-action_dropdown::before {
@@ -388,10 +389,19 @@
 td.img-cart-view {
     padding-right: 10px;
     padding-bottom: 10px;
+
 }
 .img-cart-view {
     padding: 18px  0;
+    object-fit: cover;
 }
+
+.img-cart-view img {
+    max-width: 150px;
+    object-fit: cover;
+    max-height: 130px;
+}
+
 .pro-price-view {
     font-weight: 600;
     font-size: 1.8rem;
@@ -471,4 +481,28 @@ td .pro-title-view{
 
 .header_navbar-icon--gr.heading-cart:hover .header-action_dropdown {
     display: block;
+}
+
+.remove-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove-cart  .remove-icon {
+    text-decoration: none !important;
+}
+
+
+
+
+
+a.remove-icon-link {
+    text-decoration: none !important;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    color: var(--black-color);
+    background-color: #ccc;
+
 }

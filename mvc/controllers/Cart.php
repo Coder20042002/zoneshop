@@ -53,12 +53,17 @@ class Cart extends Controller {
             }
          }
          $product=null;
+         $product1=null;
          if(!empty( $_SESSION["giohang"])) {
             $product= $list->list_Cart();
             
             $result= $list->list_Cart();
             
             $total=$list->list_Cart();
+            
+            $product1= $list->list_Cart();
+            
+
            
          } else {
             $result=null;
@@ -71,7 +76,8 @@ class Cart extends Controller {
             "Page"=>"cart",
             "Product"=>$product,
             "Result"=>$result,
-            "Total"=>$total
+            "Total"=>$total,
+            "Product1"=>$product1,
             
         ]);
        

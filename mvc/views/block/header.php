@@ -97,52 +97,71 @@
 
             ?>
           </span>
+          
           <div class="header-action_dropdown">
-            <span class="box-triangle">
-              
-            </span>
             <div class="header-dropdown_content">
               <div class="site-cart">
                 <div class="cart-ttbold">
                   <p class="ttbold">Giỏ hàng</p>
                 </div>
                 <div class="cart-view clearfix">
-                  <div class="cart-view-scroll">
-                    <table id="clone-item-cart" class="table-clone-cart">
-                      <tbody>
-                        <tr class="item_2 hidden">
-                          <td class="img-cart-view"><a href="#" title="#"><img src="//product.hstatic.net/200000312481/product/f3a03cf4-d806-412e-be17-f91053a4addb_6a54944685ec4208a8752dec361deeea_small.jpeg" alt="#"></a></td>
-                          <td class="cart-pro">
-                            <p class="pro-title">
-                              <a class="pro-title-view" href="#" title="#">BASIC SHORT / BROWN COLOR</a>
-                              <span class="variant">Size: S</span>
-                            </p>
-                            <div class="mini-cart_quantity">
-                              <div class="pro-quantity-view"><span class="qty-value">1</span></div>
-                              <div class="pro-price-view">189,000₫</div>
-                            </div>
-                            
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                   
-                  </div>
-                  <div class="line"></div>
-                  <div class="cart-view-total">
-                    <table class="table-total">
-                      <tbody>
-                        <tr class="total-cart">
-                          <td class="text-left">TỔNG TIỀN:</td>
-                          <td class="text-right" id="total-view-cart">189,000₫</td>
-                        </tr>
-                        <tr class="total-cart">
-                          <td><a href="/cart" class=" btn-color-white">Xem giỏ hàng</a></td>
-                          <td><a href="/checkout" class="btn-color-white">Thanh toán</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <?php 
+                  if (!empty($data["Product1"])) {
+                    while ($rows = mysqli_fetch_array($data["Product1"])) {
+                        $price=$rows["gia"];
+                        $price=number_format($price);
+                        $num = (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                        $num=number_format($num);
+                        echo "
+                              <div class='cart-view-scroll'>
+                                <table id='clone-item-cart' class='table-clone-cart'>
+                                  <tbody>
+                                    <tr class='item_2 hidden'>
+                                      <td class='img-cart-view'>
+                                      <a href='#' title='#'>
+                                      <img src='$rows[hinhanh]' alt='#'></a></td>
+                                      <td class='cart-pro'>
+                                        <p class='pro-title'>
+                                          <a class='pro-title-view' href='#' title='#'>$rows[ten]</a>
+                                          
+                                          <div class='remove-cart'>
+                                            <span class='variant'>Size: ".$_SESSION['size'][$rows['id']]."</span>
+                                            <a href='cart?action=delete&id=$rows[id]' class='remove-icon-link'> <i class='ti-close remove-icon' ></i></a>
+                                            </div>
+                                        </p>
+                                        <div class='mini-cart_quantity'>
+                                            
+                                          <div class='pro-quantity-view'><span class='qty-value'>" . $_SESSION['giohang'][$rows['id']] . "</span></div>
+                                          <div class='pro-price-view'> $price</div>
+                                        </div>
+                                        
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                
+                              </div>
+
+
+                            <div class='line'></div>
+                              <div class='cart-view-total'>
+                                  <table class='table-total'>
+                                    <tbody>
+                                      <tr class='total-cart'>
+                                        <td class='text-left'>TỔNG TIỀN:</td>
+                                        <td class='text-right' id='total-view-cart'>$num</td>
+                                      </tr>
+                                      <tr class='total-cart'>
+                                        <td><a href='cart' class=' btn-color-white'>Xem giỏ hàng</a></td>
+                                        <td><a href='pay' class='btn-color-white'>Thanh toán</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                        ";}}
+                   ?>
+                  
+                  
                 </div>
               </div>
 
