@@ -45,6 +45,9 @@ class Search extends Controller
             $result = $list->list_Page_Count($from,SO_SP_TREN_TRANG);
         }
             
+        if(!empty( $_SESSION["giohang"])) {
+            $product1= $list->list_Cart();
+        }
 
         
         
@@ -52,12 +55,12 @@ class Search extends Controller
         $this->view("master", [
             "Page" => "search",
             "count" => $kq,
-            //"search" => $kq_search,
             "sanpham" => $list->list_SP(),
             "Total"=> $total,
             "Result"=>$result,
-            "Padi"=>$page
-            // "gp_sanpham"=>$list-> gp_SP()
+            "Padi"=>$page,
+            "Product1"=>$product1,
+       
 
         ]);
     }

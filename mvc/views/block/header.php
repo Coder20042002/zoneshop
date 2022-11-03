@@ -106,12 +106,17 @@
                 </div>
                 <div class="cart-view clearfix">
                   <?php 
+                  
                   if (!empty($data["Product1"])) {
+                    $total = 0;
                     while ($rows = mysqli_fetch_array($data["Product1"])) {
                         $price=$rows["gia"];
                         $price=number_format($price);
                         $num = (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
                         $num=number_format($num);
+                        $total =  $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                        
+                        
                         echo "
                               <div class='cart-view-scroll'>
                                 <table id='clone-item-cart' class='table-clone-cart'>
@@ -132,7 +137,7 @@
                                         <div class='mini-cart_quantity'>
                                             
                                           <div class='pro-quantity-view'><span class='qty-value'>" . $_SESSION['giohang'][$rows['id']] . "</span></div>
-                                          <div class='pro-price-view'> $price</div>
+                                          <div class='pro-price-view'> $num đ</div>
                                         </div>
                                         
                                       </td>
@@ -141,15 +146,17 @@
                                 </table>
                                 
                               </div>
-
-
+                              ";}
+                              $total=number_format($total);
+                              echo "
+                              
                             <div class='line'></div>
                               <div class='cart-view-total'>
                                   <table class='table-total'>
                                     <tbody>
                                       <tr class='total-cart'>
                                         <td class='text-left'>TỔNG TIỀN:</td>
-                                        <td class='text-right' id='total-view-cart'>$num</td>
+                                        <td class='text-right' id='total-view-cart'> $total đ</td>
                                       </tr>
                                       <tr class='total-cart'>
                                         <td><a href='cart' class=' btn-color-white'>Xem giỏ hàng</a></td>
@@ -157,8 +164,8 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                              </div>
-                        ";}}
+                              </div>";
+                        }
                         else {
                           echo "
                           <div class='cart-zero'>

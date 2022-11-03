@@ -52,13 +52,18 @@ class Category extends Controller {
             $result = $list->list_Page_Count($from,SO_SP_TREN_TRANG);
         }
 
+        if(!empty( $_SESSION["giohang"])) {
+            $product1= $list->list_Cart();
+        }
+
         $this->view("master",[
             "Page"=>"category",
             "list_DM"=>$list_dm->list_DanhMuc(),
             "Size"=>$size,
             "Total"=> $total,
             "Padi"=>$page,
-            "Paging"=>$result
+            "Paging"=>$result,
+            "Product1"=>$product1,
             
             
             

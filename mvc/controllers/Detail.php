@@ -25,6 +25,9 @@ class Detail extends Controller {
             
         }
 
+        if(!empty( $_SESSION["giohang"])) {
+            $product1= $list->list_Cart();
+        }
         $this->view("master",[
             "Page"=>"detail",
             "Size"=>$list_size->list_size(),
@@ -33,7 +36,8 @@ class Detail extends Controller {
             "gp"=>$k,
             "DM"=>$dm,
             "Cart"=>$cart,
-            "id_sp"=>$id
+            "id_sp"=>$id,
+            "Product1"=>$product1,
         ]);
        
     }

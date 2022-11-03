@@ -140,5 +140,10 @@ class SanPhamModel extends DB{
       return $this->giaiPhongBoNho($this->truyvan2);
   }
 
+  function list_Cart()
+    {
+        $truyvan_cart = "SELECT * FROM `tbl_sanpham` WHERE `id` IN (" . implode(",", array_keys($_SESSION["giohang"])) . ")";
+        return mysqli_query($this->con, $truyvan_cart);
+    }
 }
 ?>
