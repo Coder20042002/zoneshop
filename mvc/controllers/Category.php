@@ -7,7 +7,9 @@ class Category extends Controller {
         $list_size=$this->model("SizeModel");
 
 
-        
+        if(isset($_GET["list-option"])) {
+            var_dump(($_GET["list-option"]));exit;
+        }
 
         //size
         $size=null;
@@ -51,7 +53,7 @@ class Category extends Controller {
         }  else {
             $result = $list->list_Page_Count($from,SO_SP_TREN_TRANG);
         }
-
+        $product1=null;
         if(!empty( $_SESSION["giohang"])) {
             $product1= $list->list_Cart();
         }

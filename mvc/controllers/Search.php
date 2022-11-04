@@ -44,7 +44,7 @@ class Search extends Controller
         }  else {
             $result = $list->list_Page_Count($from,SO_SP_TREN_TRANG);
         }
-            
+        $product1=null;
         if(!empty( $_SESSION["giohang"])) {
             $product1= $list->list_Cart();
         }

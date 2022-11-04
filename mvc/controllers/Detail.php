@@ -24,7 +24,7 @@ class Detail extends Controller {
             $dm =$list->list_ID_DM($id,$id_dm);
             
         }
-
+        $product1=null;
         if(!empty( $_SESSION["giohang"])) {
             $product1= $list->list_Cart();
         }
