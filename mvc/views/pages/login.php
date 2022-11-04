@@ -29,7 +29,7 @@
    								</div>
 
    							</div>
-
+							
    							<input type="submit" value="Login" class=" btn-log_reg">
 							<a class="btn-log_reg register-form" href="register">Đăng kí</a>
    						</form>
@@ -42,16 +42,19 @@
    							</div>
 
    						</div>
-   						<div class="login-social">
-   							<a href="#" class="login-link">
-   								<i class="ti-facebook icon-login"></i>
-   								<h5>Facebook</h5>
-   							</a>
-   							<a href="#" class="login-link">
-   								<i class="ti-twitter-alt icon-login"></i>
-   								<h5>Twitter</h5>
-   							</a>
-   						</div>
+
+						<div class="login-social-main" >
+							<div class="login-social">
+								<a href="#" class="login-link">
+									<i class="ti-facebook icon-login"></i>
+									<h5>Facebook</h5>
+								</a>
+								<a href="#" class="login-link">
+									<i class="ti-twitter-alt icon-login"></i>
+									<h5>Twitter</h5>
+								</a>
+							</div>
+						</div>
 
    					</div>
    				</div>
