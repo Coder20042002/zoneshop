@@ -2,7 +2,7 @@
 class Home extends Controller {
     function SayHi(){
         $list=$this -> model("SanPhamModel");
-        
+        $product1=null;
         if(!empty( $_SESSION["giohang"])) {
             $product1= $list->list_Cart();
         }
