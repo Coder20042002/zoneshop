@@ -42,6 +42,7 @@
                             <input class="btn" type="reset" value="Xoá Form" />
                         </div><br style="clear:both;" />
                     </form>
+                    <?php require_once "msg.php"; ?>
                 </div>
             </div>
         </div>

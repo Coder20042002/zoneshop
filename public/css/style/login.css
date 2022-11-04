@@ -198,7 +198,6 @@
 
 .cls_caption {
     font-size: 1.8rem;
-    font-weight: 300;
 }
 
 .input-reg {
@@ -225,4 +224,8 @@ input.btn-reg.btn-log_reg {
 
 input.btn {
     background-color: #fcd9e2 !important;
+}
+
+.login-social-main {
+    display: block;
 }
