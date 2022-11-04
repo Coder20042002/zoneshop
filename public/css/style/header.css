@@ -506,3 +506,45 @@ a.remove-icon-link {
     background-color: #ccc;
 
 }
+
+/****************************/
+.offcanvas-title {
+    font-size: 2.5rem;
+}
+
+a.nav-link {
+    font-size: 2rem;
+}
+
+a.nav-link {
+    font-size: 2rem;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-login {
+    text-decoration: none !important;
+    background-color: var(--primary-color);
+    color: #fff;
+    /* border-radius: 2px; */
+    font-size: 1.6rem !important;
+    font-weight: 300;
+    /* width: 80px; */
+    text-align: center;
+    padding: 0 9px;
+    border-radius: 26px 26px 26px 26px;
+    cursor: pointer;
+}
+
+
+a.btn-log_reg.register-form {
+    text-decoration: none;
+    margin-top: 5px;
+    background-color: #f57494;
+}
+
+a.btn-log_reg.register-form:hover {
+    color: var(--white-color);
+}

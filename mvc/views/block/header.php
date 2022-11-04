@@ -199,13 +199,13 @@
 </div>
 <nav class="navbar navbar-dark navbar-black fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.">ZoneShop</a>
+    <a class="navbar-login" href="login">Đăng nhập</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Danh mục</h5>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ZoneShop</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -221,19 +221,17 @@
               Sản phẩm
             </a>
             <ul class="dropdown-menu dropdown-menu-dark subnav">
-              <li class="subnav-item"><a class="dropdown-item subnav-link" href="#">Áo thun</a></li>
-              <li class="subnav-item"><a class="dropdown-item subnav-link" href="#">Áo khác</a></li>
-              <!-- <li>
-                      <hr class="dropdown-divider">
-                    </li> -->
-              <li class="subnav-item"><a class="dropdown-item subnav-link" href="#">Quẩn dài </a></li>
-              <li class="subnav-item"><a class="dropdown-item subnav-link" href="#">Quẩn sọt </a></li>
+            <li class="subnav-item"><a class="subnav-link" href="./category?dm=1">Áo thun</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=2">Áo sơ mi</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=3">Áo khoác</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=4">Quần tây</a></li>
+                  <li class="subnav-item"><a class="subnav-link" href="./category?dm=5">Quần sọt</a></li>
             </ul>
           </li>
         </ul>
         <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Nhập sản phẩm cần tìm..." aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
+          <input class="form-control col-9" type="search" placeholder="Nhập sản phẩm cần tìm..." aria-label="Search">
+          <button class="btn btn-success col-3  " type="submit">Search</button>
         </form>
       </div>
     </div>

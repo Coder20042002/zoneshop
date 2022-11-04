@@ -4,6 +4,7 @@
    			<div class="login">
    				<div class="login-main">
    					<h1 class="heading-login"> Đăng nhập tài khoản</h1>
+					
 
    					<div class="login-user">
    						<form action="login/Xuli" method="post">
@@ -21,7 +22,7 @@
    							<div class="remember">
    								<div class="checkbox1">
    									<label class="checkbox"><input type="checkbox" name="" checked=""></label>
-   									<span>Remember me </span>
+   									<span>Remember </span>
    								</div>
    								<div class="forgot">
    									<h6><a href="#">Forgot Password?</a></h6>
@@ -30,6 +31,7 @@
    							</div>
 
    							<input type="submit" value="Login" class=" btn-log_reg">
+							<a class="btn-log_reg register-form" href="register">Đăng kí</a>
    						</form>
 
 						<?php require_once "msg.php"; ?>
