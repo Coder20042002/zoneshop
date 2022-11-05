@@ -26,11 +26,9 @@ class Category extends Controller {
 
 
         $page = isset($_GET['page']) ? $_GET['page'] : 1;
-        //var_dump(($_GET['page']));
         $page = is_numeric($page) ? $page : 1;
-        //var_dump(is_numeric($page));
         $from = ($page - 1) * SO_SP_TREN_TRANG;
-        //var_dump($from);
+
         if (isset($_GET["dm"])) 
             
             $result = $list->count_dm_Page($_GET["dm"]);
@@ -42,8 +40,7 @@ class Category extends Controller {
         $row = mysqli_fetch_row($result);
                
         $total = ceil($row[0] / SO_SP_TREN_TRANG);
-         //var_dump($row);
-         //var_dump($total);
+
         
 
         //Mặc định các sản chấm sẽ căn niễn thị cha trang hiện tại
@@ -71,6 +68,11 @@ class Category extends Controller {
             
             
         ]);
+    }
+
+    function Ajax() {
+        echo"hi a";
+
     }
 
    

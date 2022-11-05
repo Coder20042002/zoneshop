@@ -313,11 +313,20 @@
                 $total = $data["Total"];
                 $page = $data["Padi"];
                 echo "<div class='pager'>";
+                if($page>1) {
+                    $prev=$page-1;
+                    echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
+                }
                 for ($i = 1; $i <= (float)$total; $i++)
                     if ($i != $page)
-                        echo " <a href='category/?page=" . $i . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'>$i</a> ";
+                        echo " <a  href='category/?page=" . $i . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'>$i</a> ";
                     else
                         echo "<span>$i</span>";
+
+                if($page< $total-1) {
+                    $next=$page+1;
+                    echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
+                }
                 echo "</div>";
                 ?>
 

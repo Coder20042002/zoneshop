@@ -85,3 +85,15 @@ html{
     background-color: var(--primary-color);
     margin-right: 4px;
 }
+
+.pager span:hover {
+    color: var(--primary-color);
+}
+
+a#pre-next-page {
+    border: none;
+}
+
+a#pre-next-page:hover{
+    color: var(--primary-color);
+}
