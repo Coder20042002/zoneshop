@@ -127,13 +127,13 @@
                                       <img src='$rows[hinhanh]' alt='#'></a></td>
                                       <td class='cart-pro'>
                                         <p class='pro-title'>
-                                          <a class='pro-title-view' href='#' title='#'>$rows[ten]</a>
-                                          
+                                            <a class='pro-title-view' href='#' title='#'>$rows[ten]</a>
+                                        </p>
                                           <div class='remove-cart'>
                                             <span class='variant'>Size: ".$_SESSION['size'][$rows['id']]."</span>
                                             <a href='cart?action=delete&id=$rows[id]' class='remove-icon-link'> <i class='ti-close remove-icon' ></i></a>
-                                            </div>
-                                        </p>
+                                          </div>
+                                        
                                         <div class='mini-cart_quantity'>
                                             
                                           <div class='pro-quantity-view'><span class='qty-value'>" . $_SESSION['giohang'][$rows['id']] . "</span></div>
