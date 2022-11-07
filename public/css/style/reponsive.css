@@ -163,7 +163,8 @@
         flex: 1;
     }
 
-    input.btn-log_reg {
+    input.btn-log_reg,
+    a.btn-log_reg {
         width: 76%;
         float: left;
         margin-bottom: 5px;
@@ -173,7 +174,8 @@
 
 
     .login-social {
-       justify-content: space-between !important;
+       display: inline-flex !important;
+
     }
 
     .login-social .login-link {

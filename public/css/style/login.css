@@ -7,6 +7,7 @@
 
 .login-main {
     width: 40%;
+    min-height: 600px;
     color: var(--black-color);
     text-align: center;
     padding-bottom: 20px;
@@ -24,6 +25,7 @@
       color: var(--black-color);
       text-align: center;
       padding-bottom: 0.8em;
+      margin-top: 10%;
 }
 
 .login-input {
@@ -120,11 +122,12 @@
 }
 
 .btn-log_reg {
+    width: 100%;
+    float: left;
     background: #ff3366;
     color: #FFF;
     font-size: 26px;
     padding: 0.3em 1.2em;
-    width: 100%;
     font-weight: 500;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -156,7 +159,7 @@
     outline: none;
     border-radius: 3px;
     font-family: 'Roboto Condensed', sans-serif;
-    padding: 5px 5px;
+    padding: 5px 20px;
 
 }
 

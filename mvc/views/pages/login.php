@@ -43,7 +43,7 @@
 
    						</div>
 
-						<div class="login-social-main" >
+						<!-- <div class="login-social-main" >
 							<div class="login-social">
 								<a href="#" class="login-link">
 									<i class="ti-facebook icon-login"></i>
@@ -54,7 +54,7 @@
 									<h5>Twitter</h5>
 								</a>
 							</div>
-						</div>
+						</div> -->
 
    					</div>
    				</div>
