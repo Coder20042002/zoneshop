@@ -152,36 +152,36 @@
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?attribute=500k-599k">
+                                    <a href="category/?price=500k-599k">
                                         <label class="suv-lable">
-                                            <input name="list-option" class="option" type="checkbox" value="400k - 499k" hidden="">
+                                            
                                             400k - 499k
                                             <span class="glyphicon"></span>
                                         </label>
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?attribute=500k-599k">
+                                    <a href="category/?price=500k-599k">
                                         <label class="suv-lable">
-                                            <input name="list-option" class="option" type="checkbox" value="300k - 399k" hidden="">
+                                            
                                             300k - 399k
                                             <span class="glyphicon"></span>
                                         </label>
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?attribute=500k-599k">
+                                    <a href="category/?price=500k-599k">
                                         <label class="suv-lable">
-                                            <input name="list-option" class="option" type="checkbox" value="200k - 299k" hidden="">
+                                            
                                             200k - 299k
                                             <span class="glyphicon"></span>
                                         </label>
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?attribute=500k-599k">
+                                    <a href="category/?price=500k-599k">
                                         <label class="suv-lable">
-                                            <input name="list-option" class="option" type="checkbox" value="< 200" hidden="">
+                                            
                                             < 200
                                             <span class="glyphicon"></span>
                                         </label>

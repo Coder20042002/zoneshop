@@ -7,9 +7,7 @@ class Category extends Controller {
         $list_size=$this->model("SizeModel");
 
 
-        if(isset($_GET["list-option"])) {
-            var_dump(($_GET["list-option"]));exit;
-        }
+        
 
         //size
         $size=null;
@@ -47,7 +45,10 @@ class Category extends Controller {
         
         if (isset($_GET["dm"])) {
             $result = $list->dm_Page($_GET["dm"],$from,SO_SP_TREN_TRANG);
-        }  else {
+        } elseif(isset($_GET["price"])) {
+            $result=$list_dm->sortPrice(trim($_GET["price"],"k"),$from,SO_SP_TREN_TRANG);
+        }
+         else {
             $result = $list->list_Page_Count($from,SO_SP_TREN_TRANG);
         }
         $product1=null;
