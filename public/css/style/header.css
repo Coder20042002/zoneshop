@@ -348,6 +348,8 @@
 
 /* ===================================*/
 .header-action_dropdown {
+    height: 400px;
+    overflow: scroll;
     position: absolute;
     right: 12px;
     top:40px;
@@ -359,16 +361,16 @@
     box-shadow: 0 0 10px rgba(0, 0 ,0, 0.3);
 }
 
-.header-action_dropdown::before {
+.heading-cart::before {
     content: "";
     display: block;
     position: absolute;
-    top: -8px;
-    right: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-  
-    border-bottom: 15px solid var(--white-color);
+    width: 100px;
+    height: 20px;
+    top: 100%;
+    right: 50%;
+    color: white;
+    
 }
 
 .ttbold {
