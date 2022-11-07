@@ -13,6 +13,7 @@ class App{
          
 
          // Controller
+         
         if( file_exists("./mvc/controllers/".$arr[0].".php") ){
             $this->controller = $arr[0];
             unset($arr[0]);

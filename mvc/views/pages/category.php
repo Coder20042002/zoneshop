@@ -143,7 +143,7 @@
 
 
                                 <li class="suv-tree-item">
-                                    <a href="category/?price=600k">
+                                    <a href="category/?price=>600k">
                                         <label class="suv-lable">
                                            
                                             > 600k
@@ -155,13 +155,22 @@
                                     <a href="category/?price=500k-599k">
                                         <label class="suv-lable">
                                             
+                                            500k - 599k
+                                            <span class="glyphicon"></span>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="suv-tree-item">
+                                    <a href="category/?price=400k-499k">
+                                        <label class="suv-lable">
+                                            
                                             400k - 499k
                                             <span class="glyphicon"></span>
                                         </label>
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?price=500k-599k">
+                                    <a href="category/?price=300k-399k">
                                         <label class="suv-lable">
                                             
                                             300k - 399k
@@ -170,7 +179,7 @@
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?price=500k-599k">
+                                    <a href="category/?price=200k-299k">
                                         <label class="suv-lable">
                                             
                                             200k - 299k
@@ -179,10 +188,10 @@
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
-                                    <a href="category/?price=500k-599k">
+                                    <a href="category/?price=<200k">
                                         <label class="suv-lable">
                                             
-                                            < 200
+                                            < 200K
                                             <span class="glyphicon"></span>
                                         </label>
                                     </a>
@@ -313,19 +322,30 @@
                 $total = $data["Total"];
                 $page = $data["Padi"];
                 echo "<div class='pager'>";
+                
                 if($page>1) {
                     $prev=$page-1;
+                    if(isset($_GET["price"]))
+                    echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['price']) ? "&price=" . $_GET['price'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
+                    else
                     echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
                 }
                 for ($i = 1; $i <= (float)$total; $i++)
                     if ($i != $page)
+                        if(isset($_GET["price"]))
+                        echo " <a  href='category/?page=" . $i . (isset($_GET['price']) ? "&price=" . $_GET['price'] : "") . "'>$i</a> ";
+                        else
                         echo " <a  href='category/?page=" . $i . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'>$i</a> ";
                     else
                         echo "<span>$i</span>";
 
                 if($page< $total-1) {
                     $next=$page+1;
+                    if(isset($_GET["price"]))
+                    echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['price']) ? "&price=" . $_GET['price'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
+                    else
                     echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
+
                 }
                 echo "</div>";
                 ?>
