@@ -1,50 +1,41 @@
-
-<div class="container">
+<div class="container part">
     <div class="row">
-        <div class="col-12">
-            <div class="login">
-                <div class="login-main reg-main">
-                    <form action="register/Xuli" method="POST" class="form-reg">
-                        <h1 class="heading-login">Đăng Kí</h1>
-                        <div class="input-item input-reg ">
-                            <div class="cls_caption">Tên tài khoản:</div>
-                            <div class="cls_input">
-                                <input required class="input-warp \" type="text" name="username" value="<?php echo isset($_GET['username']) ? $_GET['username'] : ''; ?>" />
-                            </div>
-                        </div><br style="clear:both;" />
-                        <div class="input-item input-reg">
-                            <div class="cls_caption">Mật khẩu: </div>
-                            <div class="cls_input">
-                                <input required class="input-warp " type="password" name="password" />
-                            </div>
-                        </div><br style=" clear:both;" />
-                        <div class="input-item input-reg">
-                            <div class="cls_caption">Nhập lại mật khẩu:</div>
-                            <div class="cls_input">
-                                <input required class="input-warp " type="password" name="password2" />
-                            </div>
-                        </div><br style="clear:both;" />
-                        <div class="input-item input-reg">
-                            <div class="cls_caption">Họ và tên:</div>
-                            <div class="cls_input">
-                                <input required class="input-warp " type="text" name="fullname" value="<?php echo isset($_GET['fullname']) ? $_GET['fullname'] : ''; ?>" />
-                            </div>
-                        </div><br style="clear:both;" />
-                        <div class="input-item input-reg">
-                            <div class="cls_caption">Email:</div>
-                            <div class="cls_input">
-                                <input required class="input-warp " type="email" name="email" value="<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>" />
-                            </div>
-                        </div><br style="clear:both;" />
-                       
-                        <div class="img_row ">
-                            <input class="btn-reg btn-log_reg" type="submit" value="Đăng Ký"  />
-                            <input class="btn" type="reset" value="Xoá Form" />
-                        </div><br style="clear:both;" />
-                    </form>
-                    <?php require_once "msg.php"; ?>
-                </div>
+        <div class="col-lq-8 col-md-8 col-sm-10 col-sx-12 form-reg-main">
+            <div class="form__wrap ">
+                <h2 class="sec-title form__title">Tạo tài khoản</h2>
+                <form action="register/Xuli" method="POST" class="form__inp">
+                    <div class="form">
+                        <input required type="text" name="fullname" required id="reg-boder" class="form__inp" placeholder="Họ và tên" value="<?php echo isset($_GET['fullname']) ? $_GET['fullname'] : ''; ?>">
+                        <input required type="email" name="email" required id="reg-boder" class="form__inp" placeholder="Email" value="<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>">
+                        <input required type="text" name="username" id="reg-boder" class="form__inp" placeholder="Tài khoản" value="<?php echo isset($_GET['username']) ? $_GET['username'] : ''; ?>">
+                        <input required type="password" name="password" required id="reg-boder" class="form__inp" placeholder="Mật khẩu">
+                        <input required type="password" name="password2" required id="reg-boder" class="form__inp" placeholder="Xác nhận mật khẩu">
+                        <div class="form__check">
+                            <label for="policy" class="fl-con">
+                                <input type="checkbox" name="policy" value="yes" id="policy" required="" class="dp-none">
+                                Tôi đồng ý với các điều khoản và điều kiện, chính sách bảo mật và chính sách cookie
+                                </label>
+                        </div>
+                        
+                    </div>
+                    <div class="form__bot form__mb ">
+                        <input class="btn-reg" type="submit" value="Đăng ký" />
+                    </div>
+                    <span class="form__bot ">
+                        Nếu sdt hoặc email của bạn báo đã tồn tại, bấm <a href="login" class=""> vào đây </a> và login với sdt hoặc email đó với một mật khẩu bất kì để kích hoạt tài khoản hoặc liên hệ với bộ phận cskh của ZoneShop để được hỗ trợ
+                    </span>
+                </form>
             </div>
+
         </div>
+
     </div>
+
+
 </div>
+
+</div>
+<?php require_once "msg.php"; ?>
+<script>
+    document.title = "Đăng kí cùng - zoneshop";
+</script>

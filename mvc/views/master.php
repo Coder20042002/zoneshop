@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="public/css/style/reponsive.css">
     <link rel="stylesheet" href="public/css/style/search.css">
     <link rel="stylesheet" href="public/css/style/login.css">
+    <link rel="stylesheet" href="public/css/style/register.css">
     <link rel="stylesheet" href="public/css/style/detail.css">
     <link rel="stylesheet" href="public/css/style/cart.css">
     <link rel="stylesheet" href="public/css/style/pay.css">
@@ -41,11 +42,16 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <title>ZoneShop</title>
+    
+
+    
+    <title>ZoneShop - Top fashion </title>
 </head>
 <body>
     <?php require_once "./mvc/views/block/header.php" ?>
     <?php require_once "./mvc/views/pages/".$data["Page"].".php" ?>
     <?php require_once "./mvc/views/block/footer.php" ?>
 </body>
+
+
 </html>

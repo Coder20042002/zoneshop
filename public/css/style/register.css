@@ -1,0 +1,91 @@
+
+.form-reg-main {
+    display: flex;
+    margin: 0 auto;
+}
+
+.form__wrap {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.sec-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+ .form__inp {
+    width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    outline: none;
+    border: none;
+    transition: 0.2s linear;
+    
+}
+input#reg-boder {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.form__cbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #707070;
+    position: relative;
+    margin: 2px 10px 2px 0;
+    cursor: pointer;
+}
+
+.form__ctxt {
+    width: calc(100% - 26px);
+    color: #47474c;
+    cursor: pointer;
+}
+
+.form__bot {
+    margin: 2.5rem 0 2.5rem 0;
+    border: none;
+}
+
+label.fl-con {
+    border: none ;
+    border-bottom:none !important;
+    font-size: 1.5rem;
+}
+
+.btn-reg {
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 2.5rem;
+    font-weight: 200;
+    font-weight: 200;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 7px 0px;
+}
+
+
+.btn-reg:hover {
+    background-color: #f74f73;
+}
+
+.form__check {
+    display: flex;
+    justify-content: space-between;
+}
+.form__bot a.btn-reg {
+    text-decoration: none ;
+    color: var(--white-color) ;
+    background-color: #c0c0c0;
+}
+
+.forgot-pas {
+    font-size: 1.5rem;
+}

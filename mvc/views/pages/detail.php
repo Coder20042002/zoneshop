@@ -35,10 +35,12 @@
 
             <?php
             while ($rows = mysqli_fetch_object($data["Product"])) {
+                
                 $price=$rows->gia;
                 $price=number_format($price);
                 echo "
-                    <h3 class='name-product py-4'>$rows->ten</h3>
+                    
+                    <h3 id='title' class='name-product py-4'>$rows->ten</h3>
                     <h6 class='detail'>
                         <span class='pull-left'>Mã sản phẩm: <strong>A00$rows->id</strong></span>
                         <span class='pull-right'>Tình trạng: <strong>Còn hàng</strong></span>
@@ -204,4 +206,11 @@
     smallimg[3].onclick = function() {
         MainImg.src = smallimg[3].src;
     }
+</script>
+
+<script>
+        var colection= document.getElementById("title");
+        var content = colection.innerHTML;
+        document.title=content + " | zone";
+        
 </script>

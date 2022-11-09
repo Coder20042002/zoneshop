@@ -1,3 +1,4 @@
+
 <div class="part part-warp">
     <div class="container nav-container">
         <div class="row">
@@ -111,10 +112,10 @@
                                 <?php
                                 while ($rows = mysqli_fetch_object($data["list_DM"])) {
                                     echo "
-                                    
+                                  
                                 <li class='suv-tree-item'>
                                 <a href='category/?dm=" . $rows->id_dm . "'>
-                                    <label class='suv-lable'>
+                                    <label class='suv-lable title'>
              
                                         $rows->ten
                                         <span class='glyphicon'></span>
@@ -132,7 +133,7 @@
                         </li>
                         <li class="nav-divider"></li>
                         <li class="nav-tree-item">
-                            <lable class="nav-tree-item__lable">
+                            <lable class="nav-tree-item__lable '">
                                 Giá
                                 <span class="nav-tree-item__icon ti-angle-down"></span>
                             </lable>
@@ -144,7 +145,7 @@
 
                                 <li class="suv-tree-item">
                                     <a href="category/?price=>600k">
-                                        <label class="suv-lable">
+                                        <label class="suv-lable title">
                                            
                                             > 600k
                                             <span class="glyphicon"></span>
@@ -153,16 +154,16 @@
                                 </li>
                                 <li class="suv-tree-item">
                                     <a href="category/?price=500k-599k">
-                                        <label class="suv-lable">
+                                        <label class="suv-lable title'">
                                             
                                             500k - 599k
-                                            <span class="glyphicon"></span>
+                                            <span class="glyphicon  "></span>
                                         </label>
                                     </a>
                                 </li>
                                 <li class="suv-tree-item">
                                     <a href="category/?price=400k-499k">
-                                        <label class="suv-lable">
+                                        <label class="suv-lable title">
                                             
                                             400k - 499k
                                             <span class="glyphicon"></span>
@@ -171,7 +172,7 @@
                                 </li>
                                 <li class="suv-tree-item">
                                     <a href="category/?price=300k-399k">
-                                        <label class="suv-lable">
+                                        <label class="suv-lable title">
                                             
                                             300k - 399k
                                             <span class="glyphicon"></span>
@@ -180,7 +181,7 @@
                                 </li>
                                 <li class="suv-tree-item">
                                     <a href="category/?price=200k-299k">
-                                        <label class="suv-lable">
+                                        <label class="suv-lable title">
                                             
                                             200k - 299k
                                             <span class="glyphicon"></span>
@@ -189,7 +190,7 @@
                                 </li>
                                 <li class="suv-tree-item">
                                     <a href="category/?price=<200k">
-                                        <label class="suv-lable">
+                                        <label class="suv-lable title">
                                             
                                             < 200K
                                             <span class="glyphicon"></span>
@@ -282,7 +283,7 @@
                             echo
                             "<div class='col-12 col-md-6 col-xl-4'>
                                <div class='card-list'>
-                                  <a href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
+                                  <a  href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
                                         <div class='card'>
                         
 
@@ -363,4 +364,9 @@
 
 
     </div>
+<script>
+        
+        document.title= "Top-product - zoneshop";
+        
+</script>
     

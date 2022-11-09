@@ -97,7 +97,7 @@
 
 
 
-        <div class="col-sm-12 text-center">
+        <div title="" class="col-sm-12 text-center">
             <p class="mb-1">Top sản phẩm HOT</p>
             <p>Những sản phẩm thời trang mới nhất/Hot nhất</p>
         </div>
@@ -107,7 +107,8 @@
 
 
             while ($rows = mysqli_fetch_object($data["list_BestSeller"])) {
-
+                
+                
                 $price=$rows->gia;
                 $price=number_format($price);
                 $string =  '<img onmouseover="this.src=\'$rows->hinh1\'" '.' onmouseout="this.src=\'$rows->hinhanh\'" '.'    src="this.src=\'$rows->hinhanh\'" />'.'    \';';
@@ -116,9 +117,14 @@
                 "<div class='col-12 col-md-6 col-xl-3'>
                
                 <div class='card-list'>
-                 <a href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
+                 <a  href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' id='$rows->ten'>
                     <div class='card'>
-                        
+                        <script>
+                        document.title=$rows->ten
+                        </script>
+                    
+                    
+                
 
                        <img class='card-img-top' onmouseover='this.src=\"$rows->hinh1\"' '.
                         '    onmouseout='this.src=\"$rows->hinhanh\"' '.
@@ -152,3 +158,4 @@
 
     </div>
 </div>
+
