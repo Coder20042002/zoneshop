@@ -73,9 +73,9 @@
 
       <div class="col-1 header_navbar-icon">
       <?php
-            if(!empty($_SESSION["login"])) {
-              $us=$_SESSION["login"];
-              echo"<span class='acount'> $us</span>";
+            if(!empty($_SESSION['account'])) {
+              $us=$_SESSION['account'];
+              echo"<span class='acount'>" .$us['username']."</span>";
             }
 
             ?>
@@ -87,7 +87,7 @@
           <ul class="subnav subnav-login ">
             <li class="subnav-item"><a class="subnav-link" href="login">Đăng nhập</a></li>
             <li class="subnav-item"><a class="subnav-link" href="register">Đăng ký</a></li>
-            <li class="subnav-item"><a class="subnav-link" href="#">Đăng xuất</a></li>
+            <li class="subnav-item"><a class="subnav-link" href="logout">Đăng xuất</a></li>
 
           </ul>
 

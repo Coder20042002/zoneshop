@@ -36,5 +36,14 @@ if (isset($_GET['msg'])) {
         ";
         
     }
+     else if ($_GET['msg'] == "out") {
+        echo "
+         <script>
+         alert('Đăng xuất thành công!')
+        </script>
+        ";
+        
+    }
 }
+
 ?>
