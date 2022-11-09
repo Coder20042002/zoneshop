@@ -72,7 +72,15 @@
 
 
       <div class="col-1 header_navbar-icon">
+      <?php
+            if(!empty($_SESSION["login"])) {
+              $us=$_SESSION["login"];
+              echo"<span class='acount'> $us</span>";
+            }
+
+            ?>
         <div class="header_navbar-icon--gr  header_navbar-icon-sub ">
+        
           <a href="./login" class="header_navbar-icon-link">
             <i class="fa-regular fa-user header_navbar-icon--active"></i>
           </a>
@@ -90,7 +98,7 @@
           </a>
           <span class="count-cart">
             <?php
-            if (!empty($_SESSION["giohang"])) {
+            if (!empty($_SESSION["giohang"]) && !empty($_SESSION["login"]) ) {
               $cart = (isset($_SESSION['giohang'])) ? $_SESSION['giohang'] : 0;
               echo count($cart);
             } else echo 0;

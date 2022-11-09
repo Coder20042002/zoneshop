@@ -550,3 +550,14 @@ a.btn-log_reg.register-form {
 a.btn-log_reg.register-form:hover {
     color: var(--white-color);
 }
+
+span.acount {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-size: 1rem;
+    border-radius: 18px;
+    padding: 0 8px;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
