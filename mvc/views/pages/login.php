@@ -6,7 +6,7 @@
 				<form action="login/Xuli" method="post" class="form__inp">
 					<div class="form">
 						<input required type="text" name="username" id="reg-boder" class="form__inp" placeholder="Tài khoản" value="<?php echo isset($_GET['username']) ? $_GET['username'] : ''; ?>">
-						<input required type="password" name="password" required id="reg-boder" class="form__inp" placeholder="Mật khẩu">
+						<input required type="password" name="password"  id="reg-boder" class="form__inp" placeholder="Mật khẩu">
 						<div class="form__check">
 							<label for="policy" class="fl-con">
 								<input type="checkbox" name="policy" value="yes" id="policy"  class="dp-none">

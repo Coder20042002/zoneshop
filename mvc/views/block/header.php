@@ -98,7 +98,7 @@
           </a>
           <span class="count-cart">
             <?php
-            if (!empty($_SESSION["giohang"]) && !empty($_SESSION["login"]) ) {
+            if (!empty($_SESSION["giohang"]) ) {
               $cart = (isset($_SESSION['giohang'])) ? $_SESSION['giohang'] : 0;
               echo count($cart);
             } else echo 0;

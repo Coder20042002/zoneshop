@@ -125,7 +125,8 @@
                  ?>
                 <div class="row grp-btn1">
                     <input type="submit" name="action" class="buy-btn btn-addcart" value="Thêm vào giỏ"></input>
-                    <input type="submit" name="action" class="buy-btn btn-addcart" value="Thanh toán"></input>
+                    <a href='pay' class='buy-btn btn-addcart'>Thanh toán</a>
+                    
                 </div>
             </form>
 
@@ -173,7 +174,7 @@
                                             <span class='card-price-text'>Giá bán : </span>
                                             <span class='card-price'>$rows->gia đ</span>
                                         </p>
-                                        <a href='#' class='btn btn-primary'>Mua ngay</a>
+                                        <a href='pay' class='btn btn-primary'>Mua ngay</a>
                                     </div>
                                 </div>
                                 </a> 

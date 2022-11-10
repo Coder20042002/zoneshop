@@ -139,7 +139,7 @@
                                 <span class='card-price-text'>Giá bán : </span>
                                 <span class='card-price'> $price đ</span>
                             </p>
-                            <button class='btn btn-primary'>Mua ngay</button>
+                            <a href='pay' class='btn btn-primary'>Mua ngay</a>
                         </div>
                     </div>
                  </a> 

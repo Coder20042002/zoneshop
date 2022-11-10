@@ -1,12 +1,17 @@
 <?php
 class Login extends Controller {
     function SayHi(){
+        $list=$this -> model("SanPhamModel");
         if(!isset($_SESSION["login"])) {
             $_SESSION["login"]=array();
         }
+        $product1=null;
+            if(!empty( $_SESSION["giohang"])) {
+                $product1= $list->list_Cart();
+            }
         $this->view("master",[
-            "Page"=>"login"
-               
+            "Page"=>"login",
+            "Product1"=>$product1
         ]);
        
     }
