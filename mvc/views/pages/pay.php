@@ -1,40 +1,39 @@
 <div class="pay part part-warp">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 main-cart-left">
+            <form id="orderForm" autocomplete="on" method="post" action="">
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 main-cart-left">
 
-                <div class="row">
+                    <div class="row">
 
-
-                    <form id="orderForm">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cart-title1 title-border">THÔNG TIN GIAO HÀNG</div>
 
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="has-feedback">
-                                <input type="text" class="form-control" id="inputSuccess2" placeholder="Họ và tên" name="Name">
+                                <input required type="text" class="form-control" id="inputSuccess2" placeholder="Họ và tên" name="Name">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="has-feedback">
-                                <input type="text" class="form-control" id="inputSuccess2" placeholder="Số điện thoại" name="Phone">
+                                <input required type="text" class="form-control" id="inputSuccess2" placeholder="Số điện thoại" name="Phone">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="has-feedback">
-                                <input type="text" class="form-control" id="inputSuccess2" placeholder="Email" name="Email">
+                                <input required type="text" class="form-control" id="inputSuccess2" placeholder="Email" name="Email">
 
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="has-feedback">
-                                <input type="text" class="form-control" id="inputSuccess2" placeholder="Địa chỉ" name="Address">
+                                <input required type="text" class="form-control" id="inputSuccess2" placeholder="Địa chỉ" name="Address">
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group location" id="list-city">
-                            <select class="form-control" id="City" name="City">
+                            <select required class="form-control" id="City" name="City">
                                 <option value="0">Tỉnh/ Thành Phố</option>
-                                <option value="">Đồng Tháp</option>
+                                <option value=" Đồng Tháp">Đồng Tháp</option>
 
                             </select>
                         </div>
@@ -50,7 +49,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-group">
                             <div class="ck1">
-                                <input type="checkbox" id="cb2" name="isNotification">
+                                <input required type="checkbox" id="cb2" name="isNotification">
                                 <label for="cb2"></label>
                                 Cập nhật các thông tin mới nhất về chương trình từ ZoneShop
                             </div>
@@ -86,7 +85,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
                             <div class="ck1">
-                                <input type="radio" id="cb7" name="paymentType" class="paymentType" value="onepay">
+                                <input  type="radio" id="cb7" name="paymentType" class="paymentType" value="onepay">
                                 <label for="cb7"></label>
                                 Thanh toán bằng thẻ quốc tế và nội địa (ATM) &nbsp; &nbsp; <img class="tooltip_attach" src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_cham_hoi.svg">
                                 &nbsp; &nbsp; <img src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_Cash_visa.svg">
@@ -107,71 +106,106 @@
                                 Vui lòng đọc kĩ các cam kết về phương thức này trước khi quyết định. Phí thanh toán đang được áp dụng là 1% trên tổng thanh toán.
                             </div>
                         </div>
-                    </form>
+
+
+                    </div>
 
                 </div>
 
-            </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 main-cart-right">
+                    <ul class='list-group'>
+                        <div class='cart-title1 title-border1'>ĐƠN HÀNG</div>
+                        <div class=' left-divider divider-blur'></div>
+
+                        <?php
+                        $total = 0;
+                        while ($rows = mysqli_fetch_array($data["Result"])) {
+                            $price = $rows["gia"];
+                            $price = number_format($price);
+                            $num = (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                            $num = number_format($num);
+                            $total =  $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
 
 
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 main-cart-right">
-                <ul class="list-group">
-                    <div class="cart-title1 title-border1">ĐƠN HÀNG</div>
-                    <div class=" left-divider divider-blur"></div>
 
-                    <input type="hidden" value="713796" class="productDetailId">
-                    <input type="hidden" value="Vintas Landforms - Low Top" class="productName">
-                    <input type="hidden" value="Marmalade" class="productColor">
-                    <input type="hidden" value="AV00175" class="productSku">
-                    <input type="hidden" value="720.000" class="productPrice">
-                    <input type="hidden" value="Footwear | Lên chân" class="productCategory">
-                    <input type="hidden" value="VND" class="currency">
-                    <input type="hidden" value="0" class="discount">
-                    <input type="hidden" value="Ananas" class="brand">
-                    <input type="hidden" value="Vintas" class="productLine">
-                    <input type="hidden" value="Low Top" class="designs">
-                    <input type="hidden" value="Landforms" class="collection">
-                    <input type="hidden" value="300" class="quantity">
-
-                    <li class="list-cart-group text-1">
-                        <span class="title-6">Vintas Landforms - Low Top - Marmalade</span>
-                        <span class="title-6-1">720.000 VND</span>
-                    </li>
-                    <li class="list-cart-group text-1-1">
-                        <span class="title-6-2">Size: 35</span>
-                        <span class="title-6-3">x 1</span>
-                    </li>
-
-                    
+                            echo "
+                        <li class='list-cart-group text-1'>
+                            <span class='title-6'>$rows[ten]</span>
+                            <span class='title-6-1'> $num VND</span>
+                        </li>
+                        <li class='list-cart-group text-1-1'>
+                            <span class='title-6-2'>Size: 35</span>
+                            <span class='title-6-3'>x " . $_SESSION['giohang'][$rows['id']] . "</span>
+                        </li>
 
 
-                    <li class="list-cart-group divider-1"></li>
-                    <li class="list-cart-group text-1">
-                        <span class="title-3">Đơn hàng</span>
-                        <span class="title-3-1"><span class="current-price"> 720.000</span></span>
-                    </li>
 
-                    <li class="list-cart-group text-2-3">
-                        <span class="title-21">Phí vận chuyển</span>
-                        <span class="title-22"><span class="shipping-fee">0</span></span>
-                    </li>
-                    <li class="list-cart-group text-2-3">
-                        <span class="title-21">Phí thanh toán</span>
-                        <span class="title-22"><span class="card-fee">0</span></span>
-                    </li>
 
-                    <li class="list-cart-group divider-1"></li>
-                    <li class="list-cart-group">
-                        <span class="title-5">TỔNG CỘNG</span>
-                        <span class="title-5-2"><span class="total-price">720.000</span></span>
-                    </li>
-                    <li class="list-cart-group">
-                        <input type="submit" class="btn btn-cart btn-complete-detail" value="HOÀN TẤT ĐẶT HÀNG" name="pay">
-                        </input>
-                    </li>
-                </ul>
-            </div>
+                        
+                        ";
+                        }
+                        
+                        
+                        
+                        ?>
+                        <li class='list-cart-group divider-1'></li>
+                        <li class='list-cart-group text-1'>
+                            <span class='title-3'>Đơn hàng</span>
+                            <span class='title-3-1'><span class='current-price'>
+                                <?php 
+                                 $total = 0;
+                                   
+                                 while ($rows = mysqli_fetch_array($data["Total"])) {
+                                     
+                                     $total = $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                                     
+                                 }
+                                 $total=number_format($total);
+                                 echo" $total VND";
+                                 ?>
+                            </span></span>
+                        </li>
+
+                        <li class='list-cart-group text-2-3'>
+                            <span class='title-21'>Phí vận chuyển</span>
+                            <span class='title-22'><span class='shipping-fee'>15,000 VND</span></span>
+                        </li>
+                        <li class='list-cart-group text-2-3'>
+                            <span class='title-21'>Phí thanh toán</span>
+                            <span class='title-22'><span class='card-fee'>2,000 VND</span></span>
+                        </li>
+
+                        <li class='list-cart-group divider-1'></li>
+                        <li class='list-cart-group'>
+                            <span class='title-5'>TỔNG CỘNG</span>
+                            <span class='title-5-2'><span class='total-price'>
+                               
+                            <?php 
+                                 $total = 0;
+                                 $ship=15000;
+                                 $pay=2000;  
+                                 while ($rows = mysqli_fetch_array($data["Total1"])) {
+                                     
+                                     $total = $total + (int)$rows["gia"] * (int)$_SESSION["giohang"][$rows["id"]];
+                                     
+                                 }
+                                 $total=number_format($total - $ship - $pay);
+                                 echo" $total VND
+                                 <input type='hidden' name='total' value='$total' hiden=''>
+                                 ";
+                                 ?>
+                            </span></span>
+                        </li>
+                        <li class='list-cart-group'>
+                            <input type='submit' class='btn btn-cart btn-complete-detail' value='HOÀN TẤT ĐẶT HÀNG' name='pay'>
+                            </input>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </form>
         </div>
     </div>
 </div>
-
