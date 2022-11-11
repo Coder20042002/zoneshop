@@ -12,7 +12,7 @@ class CartModel extends DB
                 $giohang[$hang["id"]] = $hang;
                 $_SESSION["giohang"] = $giohang;
             }
-        }
+        } 
     }
     function xoahangkhoiglio($key)
     {
@@ -74,5 +74,22 @@ class CartModel extends DB
     {
         $truyvan_cart = "SELECT * FROM `tbl_sanpham` WHERE `id` IN (" . implode(",", array_keys($_SESSION["giohang"])) . ")";
         return mysqli_query($this->con, $truyvan_cart);
+    }
+
+    function  suggestProducts1() {
+        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 1";
+        return mysqli_query($this->con,$truyvan);
+    }
+    function  suggestProducts2() {
+        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 2,1";
+        return mysqli_query($this->con,$truyvan);
+    }
+    function  suggestProducts3() {
+        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 3,1";
+        return mysqli_query($this->con,$truyvan);
+    }
+    function  suggestProducts4() {
+        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 4,1";
+        return mysqli_query($this->con,$truyvan);
     }
 }

@@ -24,9 +24,12 @@ class Cart extends Controller {
             switch($_GET["action"]) {
                 case "add":
                     
-                    
+                    //var_dump($_POST["action"]);exit;
                     foreach($_POST['size'] as $id => $size) {
+                        if(isset( $_SESSION["size"][$id]))
                         $_SESSION["size"][$id]=$size;
+                        else
+                        $_SESSION["size"][$id]="M";
                     }                                       
                     $list->Update(true);
                     
@@ -82,6 +85,11 @@ class Cart extends Controller {
             "Result"=>$result,
             "Total"=>$total,
             "Product1"=>$product1,
+            "BestSP1"=>$list->suggestProducts1(),
+            "BestSP2"=>$list->suggestProducts2(),
+            "BestSP3"=>$list->suggestProducts3(),
+            "BestSP4"=>$list->suggestProducts4(),
+            
             
         ]);
        

@@ -52,7 +52,8 @@ select.form-control:not([size]):not([multiple]) {
 .main-cart-right .title-border1 {
     color: #000;
     font-size: 2.2rem;
-    margin: 0px 0px 20px 0px;
+    margin: -12px 0px 20px 0px;
+    padding: 5px 20px 5px 20px;
     font-weight: 700;
     background-color: #f1f1f1;
 }

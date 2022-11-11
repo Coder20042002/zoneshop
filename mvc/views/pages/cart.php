@@ -12,92 +12,134 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="" tabindex="-1">
-                                                            <img class="media-object " src="https://ananas.vn/wp-content/uploads/ALB005_1-500x500.jpg">
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h4 class="media-heading">
-                                                            <a href="" tabindex="-1">Blank Shoelaces</a>
-                                                        </h4>
-                                                        <h4 class="media-heading">Gargoyle</h4>
-                                                        <h5 class="price-silder">35.000 VND</h5>
-                                                        <h5 class="button">
-                                                            <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM">
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="" tabindex="-1">
-                                                            <img class="media-object " src="https://ananas.vn/wp-content/uploads/ALB005_1-500x500.jpg">
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h4 class="media-heading">
-                                                            <a href="" tabindex="-1">Blank Shoelaces</a>
-                                                        </h4>
-                                                        <h4 class="media-heading">Gargoyle</h4>
-                                                        <h5 class="price-silder">35.000 VND</h5>
-                                                        <h5 class="button">
-                                                        <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM">
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <form action="cart?action=add" method="post" class="bestsp">
+                                                <?php 
+                                                while($rows = mysqli_fetch_object($data["BestSP1"])) {
+                                                    $price=number_format($rows->gia);
+                                                    echo"
+                                                        <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                                                            <div class='media'>
+                                                                <div class='media-left'>
+                                                                    <a href='' tabindex='-1'>
+                                                                        <img class='media-object ' src='$rows->hinhanh'>
+                                                                    </a>
+                                                                </div>
+                                                                <div class='media-body'>
+                                                                    <h4 class='media-heading'>
+                                                                        <a href='' tabindex='-1'>$rows->ten</a>
+                                                                    </h4>
+                                                                    <h4 class='media-heading'>Best seller</h4>
+                                                                    <h5 class='price-silder'>$price VND</h5>
+                                                                    <h5 class='button'>
+                                                                    <input type='hidden' value='1' min='1' name='soluong[$rows->id]]'>
+                                                                    <input type='hidden' value='M' min='1' name='size[$rows->id]]'>
+                                                                    <input type='submit' name='action' data-id='191681' class='btn btn-cart btn-add-product-related' tabindex='-1' value='Thêm' >                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ";
+                                                }
+                                                ?>
+                                             </form>
+                                            <form action="cart?action=add" method="post" class="bestsp">
+                                                <?php 
+                                                while($rows = mysqli_fetch_object($data["BestSP2"])) {
+                                                    $price=number_format($rows->gia);
+                                                    echo"
+                                                        <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                                                            <div class='media'>
+                                                                <div class='media-left'>
+                                                                    <a href='' tabindex='-1'>
+                                                                        <img class='media-object ' src='$rows->hinhanh'>
+                                                                    </a>
+                                                                </div>
+                                                                <div class='media-body'>
+                                                                    <h4 class='media-heading'>
+                                                                        <a href='' tabindex='-1'>$rows->ten</a>
+                                                                    </h4>
+                                                                    <h4 class='media-heading'>Best seller</h4>
+                                                                    <h5 class='price-silder'>$price VND</h5>
+                                                                    <h5 class='button'>
+                                                                    <input type='hidden' value='1' min='1' name='soluong[$rows->id]]'>
+                                                                    <input type='hidden' value='M' min='1' name='size[$rows->id]]'>
+                                                                    <input type='submit' name='action' data-id='191681' class='btn btn-cart btn-add-product-related' tabindex='-1' value='Thêm' >                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ";
+                                                }
+                                                ?>
+                                             </form>
+                                            
                                         </div>
 
                                     </div>
-                                    <div class="carousel-item">
+                                    
+                                    <div class="carousel-item ">
                                         <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="" tabindex="-1">
-                                                            <img class="media-object " src="https://ananas.vn/wp-content/uploads/ALB005_1-500x500.jpg">
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h4 class="media-heading">
-                                                            <a href="" tabindex="-1">Blank Shoelaces</a>
-                                                        </h4>
-                                                        <h4 class="media-heading">Gargoyle</h4>
-                                                        <h5 class="price-silder">35.000 VND</h5>
-                                                        <h5 class="button">
-                                                            <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM" >
-                                                            </input>
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="" tabindex="-1">
-                                                            <img class="media-object " src="https://ananas.vn/wp-content/uploads/ALB005_1-500x500.jpg">
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h4 class="media-heading">
-                                                            <a href="" tabindex="-1">Blank Shoelaces</a>
-                                                        </h4>
-                                                        <h4 class="media-heading">Gargoyle</h4>
-                                                        <h5 class="price-silder">35.000 VND</h5>
-                                                        <h5 class="button">
-                                                            <input data-id="191681" class="btn btn-cart btn-add-product-related" tabindex="-1" value="THÊM">
-                                                            </input>
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <form action="cart?action=add" method="post" class="bestsp">
+                                                <?php 
+                                                while($rows = mysqli_fetch_object($data["BestSP3"])) {
+                                                    $price=number_format($rows->gia);
+                                                    echo"
+                                                        <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                                                            <div class='media'>
+                                                                <div class='media-left'>
+                                                                    <a href='' tabindex='-1'>
+                                                                        <img class='media-object ' src='$rows->hinhanh'>
+                                                                    </a>
+                                                                </div>
+                                                                <div class='media-body'>
+                                                                    <h4 class='media-heading'>
+                                                                        <a href='' tabindex='-1'>$rows->ten</a>
+                                                                    </h4>
+                                                                    <h4 class='media-heading'>Best seller</h4>
+                                                                    <h5 class='price-silder'>$price VND</h5>
+                                                                    <h5 class='button'>
+                                                                    <input type='hidden' value='1' min='1' name='soluong[$rows->id]]'>
+                                                                    <input type='hidden' value='M' min='1' name='size[$rows->id]]'>
+                                                                    <input type='submit' name='action' data-id='191681' class='btn btn-cart btn-add-product-related' tabindex='-1' value='Thêm' >                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ";
+                                                }
+                                                ?>
+                                             </form>
+                                            <form action="cart?action=add" method="post" class="bestsp">
+                                                <?php 
+                                                while($rows = mysqli_fetch_object($data["BestSP4"])) {
+                                                    $price=number_format($rows->gia);
+                                                    echo"
+                                                        <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                                                            <div class='media'>
+                                                                <div class='media-left'>
+                                                                    <a href='' tabindex='-1'>
+                                                                        <img class='media-object ' src='$rows->hinhanh'>
+                                                                    </a>
+                                                                </div>
+                                                                <div class='media-body'>
+                                                                    <h4 class='media-heading'>
+                                                                        <a href='' tabindex='-1'>$rows->ten</a>
+                                                                    </h4>
+                                                                    <h4 class='media-heading'>Best seller</h4>
+                                                                    <h5 class='price-silder'>$price VND</h5>
+                                                                    <h5 class='button'>
+                                                                    <input type='hidden' value='1' min='1' name='soluong[$rows->id]]'>
+                                                                    <input type='hidden' value='M' min='1' name='size[$rows->id]]'>
+                                                                    <input type='submit' name='action' data-id='191681' class='btn btn-cart btn-add-product-related' tabindex='-1' value='Thêm' >                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ";
+                                                }
+                                                ?>
+                                             </form>
+                                            
                                         </div>
 
                                     </div>
+                                               
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

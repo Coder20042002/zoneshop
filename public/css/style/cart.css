@@ -27,7 +27,7 @@
 
 .info {
     display: flex;
-    justify-content: space-between;
+    
 }
 
 .info-img {
@@ -60,6 +60,11 @@ p.price-porduct {
 
 
 
+}
+
+.pro-title {
+    /* width: 170px; */
+    min-width: 170px;
 }
 
 input.input-number.input-cart {
@@ -285,4 +290,9 @@ font-weight: 600;
 h3.info-heading {
     font-size: 1.9rem;
     font-weight: 700;
+}
+
+
+.bestsp {
+    display: contents;
 }
