@@ -12,6 +12,20 @@ class DanhMucModel extends DB{
     }
     
 
+    //atribute
+    //dem so luong tong
+    function count_attribute($key){
+        $truyvan_Count = "SELECT count(*) from tbl_sanpham where attribute like '%".$key."%'";
+       return mysqli_query($this->con,$truyvan_Count);
+    }
+
+    //phan tran 
+    function attribute_Page($key,$from,$page){
+        $attribute_page="SELECT * FROM tbl_sanpham WHERE attribute like '%".$key."%' limit " . $from . ", " . $page;
+        return mysqli_query($this->con,$attribute_page);
+    }
+
+    //gia
     function sortPrice($key,$from,$page){
         $truyvan="SELECT * FROM tbl_sanpham WHERE TRIM(TRAILING RIGHT(gia,3) FROM gia) > ".$key."  limit " . $from . ", " . $page;
         return mysqli_query($this->con,$truyvan);
@@ -25,6 +39,8 @@ class DanhMucModel extends DB{
         $truyvan="SELECT * FROM tbl_sanpham WHERE TRIM(TRAILING RIGHT(gia,3) FROM gia) < ".$key."    limit " . $from . ", " . $page;
         return mysqli_query($this->con,$truyvan);
     }
+
+
 
     //phan trang
     function count_dm_Page_Price_T($key){

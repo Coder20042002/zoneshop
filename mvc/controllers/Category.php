@@ -27,10 +27,12 @@ class Category extends Controller {
         $page = is_numeric($page) ? $page : 1;
         $from = ($page - 1) * SO_SP_TREN_TRANG;
 
-
+        
         if (isset($_GET["dm"])) 
             
             $result = $list->count_dm_Page($_GET["dm"]);
+        elseif(isset($_GET["attribute"]))
+            $result =$list_dm->count_attribute($_GET["attribute"]);
         elseif(isset($_GET["price"]))
             if($_GET["price"]==">600k")
             $result=$list_dm->count_dm_Page_Price_T(trim($_GET["price"],"k,<,>")); 
@@ -56,7 +58,10 @@ class Category extends Controller {
         if (isset($_GET["dm"])) {
             $result = $list->dm_Page($_GET["dm"],$from,SO_SP_TREN_TRANG);
 
-        } elseif(isset($_GET["price"]) ) {
+        } elseif(isset($_GET["attribute"])) 
+            $result=$list_dm->attribute_Page($_GET["attribute"],$from,SO_SP_TREN_TRANG);
+          
+         elseif(isset($_GET["price"]) ) {
             if($_GET["price"]==">600k")
             $result=$list_dm->sortPrice(trim($_GET["price"],"k,<,>"),$from,SO_SP_TREN_TRANG);
             elseif(strlen($_GET["price"])>7)

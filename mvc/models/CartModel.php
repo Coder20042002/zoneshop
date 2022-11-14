@@ -1,95 +1,108 @@
 <?php
-class CartModel extends DB
-{
-    function themhangvaogdo($hang)
-    {
-        if (isset($_SESSION['giohang'])) {
-            $giohang =$_SESSION['giohang'];
-            if (!array_key_exists($hang["id"], $giohang)) { //nêu hàng chưa có trong giỏ mới cho thêm
-                $giohang[$hang["id"]] = $hang; //key của mảng sẽ được xây theo id của sản phẩm
-                $_SESSION['giohang'] = $giohang;
-            } else {
-                $giohang[$hang["id"]] = $hang;
-                $_SESSION["giohang"] = $giohang;
-            }
-        } 
-    }
-    function xoahangkhoiglio($key)
-    {
-        if (isset($_SESSTON["giohang"])) {
-            $giohang = $_SESSION['giohang'];
-        };
-        unset($giohang[$key]);
-        $_SESSTON['giohang'] = $giohang;
-    }
+class Category extends Controller {
+    function SayHi(){
+        //model
+        $list=$this -> model("SanPhamModel");
+        $list_dm=$this -> model("DanhMucModel");
+        $list_size=$this->model("SizeModel");
 
-    function capnhathangtrongio($key, $soluong)
-    {
-        if (isset($_SESSION['giohang'])) {
-            $giohang = $_SESSION['giohang'];
-            $qiohang[$key]['soluong'] = $soluong;
-            $_SESSION['giochang'] = $giohang;
+
+        
+
+        //size
+        $size=null;
+        if (isset($_GET["size"])) {
+            $key= $_GET["size"];
+            $size =$list_size->list_ID_Size($key);
+
+        } else {
+            $size=$list_size->list_size();
         }
-    }
-    function tinhtien()
-    {
-        $sum = 0;
-        $giohang = $_SESSION['giohang'];
-        foreach ($giohang as $v)
-            $sum += $v['soluong'] * $v['gia'];
-        return number_format($sum);
-    }
+
+        //===================================================\
+       
 
 
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $page = is_numeric($page) ? $page : 1;
+        $from = ($page - 1) * SO_SP_TREN_TRANG;
 
-    function Update($key = false)
-    {
-        foreach ($_POST['soluong'] as $id_sp => $soluong) {
+        
+        if (isset($_GET["dm"])) 
+            
+            $result = $list->count_dm_Page($_GET["dm"]);
+        elseif(isset($_GET["attribute"]))
+            $result =$list_dm->count_attribute($_GET["attribute"]);
+        elseif(isset($_GET["price"]))
+            if($_GET["price"]==">600k")
+            $result=$list_dm->count_dm_Page_Price_T(trim($_GET["price"],"k,<,>")); 
+            elseif(strlen($_GET["price"])>7) {
+            $key1=substr($_GET["price"],0,3);
+            $key2=substr($_GET["price"],5,3);
+            $result=$list_dm->count_dm_Page_Price_M($key1,$key2);  }    
+            else
+            $result=$list_dm->count_dm_Page_Price_S(trim($_GET["price"],"k,<,>"));   
+        else 
+            $result = $list->count_SP();
+            
+        
+        $row = mysqli_fetch_row($result);
+        //var_dump($row);exit;      
+        $total = ceil($row[0] / SO_SP_TREN_TRANG);
+        
 
-            if ($soluong == 0) {
-                unset($_SESSION["giohang"][$id_sp]);
-            } else {
-                if ($key) {
-                    $_SESSION["giohang"][$id_sp] += $soluong;
-                } else {
-                    $_SESSION["giohang"][$id_sp] = $soluong;
-                }
-            }
+        
+
+        //Mặc định các sản chấm sẽ căn niễn thị cha trang hiện tại
+        
+        if (isset($_GET["dm"])) {
+            $result = $list->dm_Page($_GET["dm"],$from,SO_SP_TREN_TRANG);
+
+        } elseif(isset($_GET["attribute"])) 
+            $result=$list_dm->attribute_Page($_GET["attribute"],$from,SO_SP_TREN_TRANG);
+          
+         elseif(isset($_GET["price"]) ) {
+            if($_GET["price"]==">600k")
+            $result=$list_dm->sortPrice(trim($_GET["price"],"k,<,>"),$from,SO_SP_TREN_TRANG);
+            elseif(strlen($_GET["price"])>7)
+            $result=$list_dm->sortPriceDis(substr($_GET["price"],0,3),substr($_GET["price"],5,3),$from,SO_SP_TREN_TRANG);
+            else
+            $result=$list_dm->sortPrice_short(trim($_GET["price"],"k,<,>"),$from,SO_SP_TREN_TRANG);
         }
+         else {
+            $result = $list->list_Page_Count($from,SO_SP_TREN_TRANG);
+            
+        }
+        
+        $product1=null;
+        if(!empty( $_SESSION["giohang"])) {
+            $product1= $list->list_Cart();
+        }
+
+        $this->view("master",[
+            "Page"=>"category",
+            "list_DM"=>$list_dm->list_DanhMuc(),
+            "Size"=>$size,
+            "Total"=> $total,
+            "Padi"=>$page,
+            "Paging"=>$result,
+            "Product1"=>$product1,
+            
+            
+            
+            
+        ]);
     }
 
-    function Dipose()
-    {
-        mysqli_close($this->con);
-    }
+    
 
-    //danh sach danh mục san pham
-    function list_SP($key)
-    {
-        $truyvan_dm = "SELECT * FROM tbl_sanpham where id='$key' ";
-        return mysqli_query($this->con, $truyvan_dm);
+   
+        
+       
+        
     }
+    
+    
 
-    function list_Cart()
-    {
-        $truyvan_cart = "SELECT * FROM `tbl_sanpham` WHERE `id` IN (" . implode(",", array_keys($_SESSION["giohang"])) . ")";
-        return mysqli_query($this->con, $truyvan_cart);
-    }
 
-    function  suggestProducts1() {
-        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 1";
-        return mysqli_query($this->con,$truyvan);
-    }
-    function  suggestProducts2() {
-        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 2,1";
-        return mysqli_query($this->con,$truyvan);
-    }
-    function  suggestProducts3() {
-        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 3,1";
-        return mysqli_query($this->con,$truyvan);
-    }
-    function  suggestProducts4() {
-        $truyvan="SELECT * FROM `tbl_sanpham` WHERE id_bestseller=1 ORDER BY gia ASC LIMIT 4,1";
-        return mysqli_query($this->con,$truyvan);
-    }
-}
+?>

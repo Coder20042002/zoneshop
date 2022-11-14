@@ -10,6 +10,7 @@
     justify-content: space-between!important;
     height: var(--header-height);
     white-space: nowrap;
+    
 }
 /* 
 .header-warp {
@@ -561,3 +562,8 @@ span.acount {
     top: 3px;
     right: 8px;
 }
+
+.mobile-warp .navbar-login {
+    color: var(--white-color);
+}
+

@@ -1,6 +1,6 @@
 <div class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row" id=footer-mobile>
                 <div class="col-md-3 col-sm-4">
                     <h3 class="footer-heading">Chăm sóc khách hàng</h3>
                     <ul class="footer-list">
@@ -62,10 +62,10 @@
                 <div class="col-md-12  col-12  mcenter">
                     <hr style="margin: 10px 0;">
                     <p>© 2022 - CÔNG TY TNHH EM VI ANH VN</p>
-                    <p>Giấy CNĐKDN: 0310874914 – Ngày cấp: 25/11/2011 - Cơ quan cấp: Phòng Đăng Ký Kinh Doanh – Sở Kế
+                    <p>Giấy CNĐKDN: 048874914 – Ngày cấp: 25/11/2011 - Cơ quan cấp: Phòng Đăng Ký Kinh Doanh – Sở Kế
                         Hoạch và Đầu Tư TP.HCM</p>
-                    <p>Địa chỉ đăng ký kinh doanh: 766/3B-3C Sư Vạn Hạnh (Nối dài), Phường 12, Quận 10, TP.HCM - Điện
-                        thoại: (028) 3868 4857 - Mua hàng: (028) 7307 1441 - Email: zoneshop@gmail.com.vn</p>
+                    <p>Địa chỉ đăng ký kinh doanh: Sao hoả xa tít, Phường sao kim, Quận sao mộc, TP.SAO HOA - Điện
+                        thoại: 09xxxxxxx - Mua hàng: 08xxxxxx - Email: zoneshop@gmail.com.vn</p>
                 </div>
 
             </div>

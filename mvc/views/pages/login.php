@@ -19,6 +19,7 @@
 					<div class="form__bot form__mb ">
 						<input class="btn-reg" type="submit" value="Login" />
 						<a class="btn-reg" href="register">Đăng ký</a>
+						<a class="btn-reg btn-logout" href="logout">Đăng xuất</a>
 					</div>
 
 					<span class="form__bot ">

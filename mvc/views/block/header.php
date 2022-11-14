@@ -207,7 +207,23 @@
 </div>
 <nav class="navbar navbar-dark navbar-black fixed-top">
   <div class="container-fluid">
+  <div class="mobile-warp">
     <a class="navbar-login" href="login">Đăng nhập</a>
+    <a href="cart" class="header_navbar-icon-link">
+      <i class="ti-shopping-cart header_navbar-icon--active"></i>
+      <span class="count-cart">
+            <?php
+            if (!empty($_SESSION["giohang"]) ) {
+              $cart = (isset($_SESSION['giohang'])) ? $_SESSION['giohang'] : 0;
+              echo count($cart);
+            } else echo 0;
+
+            ?>
+          </span>
+    </a>
+  </div>
+    
+
     <button class="navbar_icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="ti-menu"></span>
     </button>
@@ -237,11 +253,12 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control col-9" type="search" placeholder="Nhập sản phẩm cần tìm..." aria-label="Search">
-          <button class="btn btn-success col-3  " type="submit">Search</button>
+        <form  class="d-flex mt-3"  role="search" action="./search" method="get">
+          <input class="form-control col-9" type="search" placeholder="Nhập sản phẩm..." aria-label="Search" name="keyword">
+          <button class="btn btn-success col-3  " type="submit">OK</button>
         </form>
       </div>
     </div>
   </div>
 </nav>
+

@@ -13,6 +13,7 @@ class SanPhamModel extends DB{
         return mysqli_query($this->con,$truyvan_page);
     }
 
+    //list san pham phan trag danh muc
     function dm_Page($key,$from,$page){
         $dm_page="SELECT * FROM tbl_sanpham WHERE id_dm=" . $key. " limit " . $from . ", " . $page;
         return mysqli_query($this->con,$dm_page);
@@ -37,7 +38,7 @@ class SanPhamModel extends DB{
 
 
     //danh sach san pham bestseller
-    public $truyvan = "SELECT * FROM tbl_sanpham where id_bestseller='1'";
+    public $truyvan = "SELECT * FROM tbl_sanpham where attribute='bestseller'";
 
     
      function list_BestSeller(){

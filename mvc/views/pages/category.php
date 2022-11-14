@@ -47,26 +47,32 @@
 
                     <ul class="suv-tree-list suv-tree-list--warp">
                         <li class="suv-tree-item">
+                        <a href="category/?attribute=only">
                             <label class="suv-lable">
-                                <input name="list-option" class="option" type="checkbox" value="" hidden="">
-                                Sản phẩm vừa ra mắt
+                                
+                                Online Only
                                 <span class="glyphicon"></span>
                             </label>
+                        </a>
                         </li>
                         <li class="suv-tree-item">
+                        <a href="category/?attribute=bestseller">
                             <label class="suv-lable">
-                                <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                
                                 Best seller
                                 <span class="glyphicon"></span>
                             </label>
                         </li>
+                        </a>
                         <li class="suv-tree-item">
+                        <a href="category/?attribute=sale">
                             <label class="suv-lable">
-                                <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                
                                 Sản phẩm khuyến mãi
                                 <span class="glyphicon"></span>
                             </label>
                         </li>
+                        </a>
 
 
                     </ul>
@@ -83,9 +89,9 @@
                             <ul class="suv-tree-list">
 
                                 <li class="suv-tree-item">
-
+                                <a href="category/?attribute=limit">
                                     <label class="suv-lable">
-                                        <!-- <input name="list-option" class="option" type="checkbox" value="" hidden=""> -->
+                                        
                                         Limited Edition
                                         <span class="glyphicon"></span>
                                     </label>
@@ -93,10 +99,12 @@
                                 </li>
 
                                 <li class="suv-tree-item">
+                                <a href="category/?attribute=new">
                                     <label class="suv-lable">
-                                        <input name="list-option" class="option" type="checkbox" value="" hidden="">
+                                       
                                         New Arrival
                                         <span class="glyphicon"></span>
+                                    </a>
                                     </label>
                                 </li>
 
@@ -328,6 +336,8 @@
                     $prev=$page-1;
                     if(isset($_GET["price"]))
                     echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['price']) ? "&price=" . $_GET['price'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
+                    elseif(isset($_GET["attribute"]))
+                    echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['attribute']) ? "&attribute=" . $_GET['attribute'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
                     else
                     echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
                 }
@@ -335,6 +345,8 @@
                     if ($i != $page)
                         if(isset($_GET["price"]))
                         echo " <a  href='category/?page=" . $i . (isset($_GET['price']) ? "&price=" . $_GET['price'] : "") . "'>$i</a> ";
+                        elseif(isset($_GET["attribute"]))
+                        echo " <a  href='category/?page=" . $i . (isset($_GET['attribute']) ? "&attribute=" . $_GET['attribute'] : "") . "'>$i</a> ";
                         else
                         echo " <a  href='category/?page=" . $i . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'>$i</a> ";
                     else
@@ -344,6 +356,8 @@
                     $next=$page+1;
                     if(isset($_GET["price"]))
                     echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['price']) ? "&price=" . $_GET['price'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
+                    elseif(isset($_GET["attribute"]))
+                    echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['attribute']) ? "&attribute=" . $_GET['attribute'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
                     else
                     echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
 
