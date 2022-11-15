@@ -91,7 +91,7 @@
             echo "<div class='pager'>";
             if($page>1) {
                 $prev=$page-1;
-                echo " <a id='pre-next-page' href='category/?page=" .$prev . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
+                echo " <a id='pre-next-page' href='search/?page=" .$prev . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-left page-icon'></i></a> ";
             }
             for ($i = 1; $i <= (float)$total; $i++)
                 if ($i != $page)
@@ -101,7 +101,7 @@
 
             if($page< $total-1) {
                 $next=$page+1;
-                echo " <a id='pre-next-page' href='category/?page=" .$next . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
+                echo " <a id='pre-next-page' href='search/?page=" .$next . (isset($_GET['dm']) ? "&dm=" . $_GET['dm'] : "") . "'><i class='ti-angle-double-right page-icon'></i></a> ";
             }        
             echo "</div>";
             

@@ -43,6 +43,13 @@ if (isset($_GET['msg'])) {
         </script>
         ";
         
+    }else if ($_GET['msg'] == "paysussces") {
+        echo "
+         <script>
+         alert('Thanh toán thành công!')
+        </script>
+        ";
+        
     }
 }
 

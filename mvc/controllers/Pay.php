@@ -25,6 +25,7 @@ class Pay extends Controller {
             $thanhtien=$_POST["total"];
             //var_dump( $thanhtien);exit;
             $order->insertOrder($name,$phone,$emali,$address1,$thanhtien);
+            header("Location: ./?msg=paysussces");
         }
         $this->view("master",[
             "Page"=>"pay",
