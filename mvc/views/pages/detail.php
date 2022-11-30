@@ -162,7 +162,7 @@
                     <?php
                     while ($rows = mysqli_fetch_object($data["DM"])) {
                         echo
-                        "<div class='col-12 col-md-6 col-xl-3'>
+                        "<div class='col-12 col-md-6 col-xl-3 col-sm-6'>
                            
                             <div class='card-list'>
                              <a href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
