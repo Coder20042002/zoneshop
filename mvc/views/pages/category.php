@@ -289,7 +289,7 @@
                             $price=$rows->gia;
                             $price=number_format($price);
                             echo
-                            "<div class='col-12 col-md-6 col-xl-4'>
+                            "<div class='col-12 col-md-6 col-xl-4 col-sm-6'>
                                <div class='card-list'>
                                   <a  href='detail/?id=" . $rows->id_hinhanh . "&&dm=" . $rows->id_dm . "&&id_sp=" . $rows->id . "' class='cart-link' >
                                         <div class='card'>
